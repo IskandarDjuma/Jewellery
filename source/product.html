@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online jewelry store</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="page-body">
+    <header class="page-header">
+      <div class="container">
+        <form class="page-herader__form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <label class="visually-hidden" for="search-text">enter the search text</label>
+          <input type="search" name="search-text" id="search-text" placeholder="Type here to search" autocomplete="off">
+          <div class="buttons">
+            <input type="submit" value="Поиск">
+          </div>
+        </form>
+        <div class="page-header__logo logo">
+          <a href="index.html">
+            <svg width="66" height="66">
+              <use xlink:href="img/sprite-auto.svg#icon-logo"></use>
+            </svg>
+          </a>
+        </div>
+        <ul class="page-header__user-menu user-menu">
+          <li class="user-menu__item user-menu__item--login">
+            <a href="#">Login</a>
+          </li>
+          <li class="user-menu__item user-menu__item--cart">
+            <a href="#">Cart</a>
+            <span class="user-menu__cart-count">0</span>
+          </li>
+        </ul>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#">What’s new</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Chokers</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Necklaces</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Rings</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Earrings</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <h1 class="visually-hidden">Jewelry product card</h1>
+        <section class="product-photos">
+          <div class="product-card__wrap" >
+            <h2 class="visually-hidden">Image of goods</h2>
+            <picture>
+               <!-- 1x: 470px; 2x: 940px -->
+              <img src="img/necklace-detail-pc@1x.jpg" srcset="img/necklace-detail-pc@2x.jpg 2x" alt="Image of a gold necklace with turquoise" width="470" height="435">
+            </picture>
+            <ul class="product-photos__preview">
+              <li>
+                <picture>
+                  <img src="img/gold-necklace-for-women@1x.jpg" srcset="img/gold-necklace-for-women@2x.jpg 2x" width="100" height="125" alt="Image of necklaces on the model">
+                </picture>
+              </li>
+              <li>
+                <picture>
+                  <img src="img/pretty-gold-necklace@1x.jpg" srcset="img/pretty-gold-necklace@2x 2x" width="100" height="125" alt="Image of necklaces on the model">
+                </picture>
+              </li>
+              <li>
+                <picture>
+                  <img src="img/womens-necklace-set@1x.jpg" srcset="img/womens-necklace-set@2x.jpg 2x" width="100" height="125" alt="Image of necklaces on the model">
+                </picture>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="product-info">
+          <h2 class="visually-hidden">Product description</h2>
+          <h3>Gold Necklace </h3>
+          <p><span>$</span>115</p>
+          <p>Description</p>
+          <p>Additional info</p>
+          <dl class="product-info__content">
+            <div class="product-info__stats">
+              <dt>Metal type</dt>
+              <dd>Gold 585</dd>
+            </div>
+            <div class="product-info__stats">
+              <dt>Stone</dt>
+              <dd>Turquoise</dd>
+            </div>
+            <div class="product-info__stats">
+              <dt>Size</dt>
+              <dd>18” / 20”</dd>
+            </div>
+          </dl>
+          <button class="button" type="button">Add to cart</button>
+          <ul class="product-info__guarantees">
+            <li>14 Day Returns</li>
+            <li>2-Year Warranty</li>
+            <li>Free Shipping</li>
+          </ul>
+        </section>
+        <section class="like">
+          <h2>You May Also Like</h2>
+          <a href="catalog.html">Shop Now</a>
+          <ul>
+            <li class="catalog__item">
+              <a href="product.html">
+                <picture>
+                   <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/purple-necklace@1x.jpg" srcset="img/purple-necklace@2x.jpg 2x" alt="Double pearl earrings" width="270" height="284">
+                </picture>
+                <h3>Necklace with amethyst </h3>
+                <p><span>$</span>145</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <picture>
+                   <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/layered-choker-necklace@1x.jpg" srcset="img/layered-choker-necklace@2x 2x" alt="Double pearl earrings" width="270" height="284">
+                </picture>
+                <h3>Layered сhoker</h3>
+                <p><span>$</span>115</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <picture>
+                   <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/dainty-gold-necklace@1x.jpg" srcset="img/dainty-gold-necklace@2x 2x" alt="Double pearl earrings" width="270" height="284">
+                </picture>
+                <h3>Gold chain</h3>
+                <p><span>$</span>215</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="product.html">
+                <picture>
+                   <!-- 1x: 270px; 2x: 540px -->
+                  <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x 2x" alt="Double pearl earrings" width="270" height="284">
+                </picture>
+                <h3>Galaxy earrings</h3>
+                <p><span>$</span>95</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="pagination">
+            <li class="pagination__item pagination-item-current"><a>1</a></li>
+            <li class="pagination__item "><a href="#">2</a></li>
+            <li class="pagination__item"><a href="#">3</a></li>
+          </ul>
+        </section>
+    </main>
+    <footer class="page-footer">
+      <div class="container page-footer__wrap">
+        <div class="news">
+          <h3>The good stuff in your inbox</h3>
+          <p>News and updates from CH. No spam, we promise.</p>
+          <form action="https://echo.htmlacademy.ru/courses" method="get">
+            <label class="visually-hidden" for="mail"></label>
+            <input type="text" placeholder="Your E-mail" id="mail" name="mail" required>
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+        <div class="footer-nav">
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="#">Ordering & Payment</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#">Terms & Conditions</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#">Returns & Exchanges</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#">Delivery</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#">About CH</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#">Stores & Hours</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#">Jobs</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="">
+                <svg width="8" height="15">
+                  <use xlink:href="img/sprite-auto.svg#icon-fb"></use>
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="">
+                <svg width="15" height="15">
+                  <use xlink:href="img/sprite-auto.svg#icon-inst"></use>
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="">
+                <svg width="16" height="15">
+                  <use xlink:href="img/sprite-auto.svg#icon-pinterest"></use>
+                </svg>
+                <span>Pinterest</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="">
+                <svg width="15" height="13">
+                  <use xlink:href="img/sprite-auto.svg#icon-twitter"></use>
+                </svg>
+                <span>Twitter</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <section class="modal modal-cart">
+      <h2>The item was added to your cart</h2>
+      <div class="modal-cart__product">
+        <picture>
+          <img src="img/necklace-detail-pc@1x.jpg" srcset="img/necklace-detail-pc@2x.jpg" alt="Image of a gold necklace with turquoise" width="84" height="79">
+        </picture>
+        <h3>Gold Necklace </h3>
+        <p><span>$</span>115</p>
+      </div>
+      <div class="modal-cart__amount">
+        <button class="modal-cart__control" type="button">
+          <svg width="14" height ="14">
+            <use xlink:href="img/sprite-auto.svg#icon-plus"></use>
+          </svg>
+        </button>
+        <span class="modal-cart__count-value">1</span>
+        <button class="modal-cart__control" type="button">
+          <svg width="14" height ="2">
+            <use xlink:href="img/sprite-auto.svg#icon-minus"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-cart__item">
+        <p>You have 1 item in the cart</p>
+        <p class="modal-cart__subtotal">Cart subtotal: <span>$ 115</span></p>
+      </div>
+      <button type="button" class="modal-cart__button modal-cart__button--shop ">Continue shopping</button>
+      <button type="button" class="modal-cart__button modal-cart__button--checkout ">Checkout</button>
+      <button class="modal__close" type="button" aria-label="Закрыть"></button>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

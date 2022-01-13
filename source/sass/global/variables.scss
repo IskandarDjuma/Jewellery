@@ -1,0 +1,30 @@
+// Fonts
+$secondary-text: "Cormorant Garamond", "Arial", sans-serif;
+$primary-text: "Poppins", "Arial", sans-serif;
+// Color
+$basic-grey: #9B9997;
+$basic-white100: #F0EAE4;
+
+$basic-gold: #a87b62;
+
+$basic-black: #000000;
+$basic-black-100: #1D1613;
+$basic-white: #ffffff;
+$transparent: rgba($basic-black, 0);
+
+$accent-color: $basic-gold;
+$primary-text-color: $basic-black-100;
+
+
+
+// Viewports
+$mobile-width: 767px;
+$tablet-width: 1023px;
+$desktop-width: 1024px;
+$desktop-width-max: 1920px;
+
+
+//Retina
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
