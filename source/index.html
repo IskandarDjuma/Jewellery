@@ -9,37 +9,44 @@
 </head>
 
 <body class="page-body">
-  <header class="page-header">
-    <div class="container">
-      <form class="page-header__form" action="https://echo.htmlacademy.ru/courses" method="post">
-        <label class="visually-hidden" for="search-text">enter the search text</label>
-        <input type="search" name="search-text" id="search-text" placeholder="Type here to search" autocomplete="off">
-        <div class="buttons">
-          <input type="submit" value="Поиск">
-        </div>
-      </form>
-      <div class="page-header__logo logo">
-        <a href="#">
-          <svg width="66" height="66">
-            <use xlink:href="img/sprite-auto.svg#icon-logo"></use>
+  <header class="page-header page-header--closed page-header--nojs">
+    <div class="container page-header__wrap">
+      <button class="page-header__toggle" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="page-header__wrapper">
+        <form class="page-header__search search" action="https://echo.htmlacademy.ru/courses" method="post">
+          <svg class="search__icon" width="14" height="14">
+            <use xlink:href="img/sprite-auto.svg#icon-search"></use>
           </svg>
-        </a>
+          <label class="visually-hidden" for="search-text">enter the search text</label>
+          <input class="search__field" type="search" name="search-text" id="search-text" placeholder="Type here to search" autocomplete="off">
+        </form>
+        <div class="page-header__logo logo">
+          <a href="#">
+            <svg class="logo__icon" width="66" height="66">
+              <use xlink:href="img/sprite-auto.svg#icon-logo"></use>
+            </svg>
+          </a>
+        </div>
+        <ul class="page-header__user-menu user-menu">
+          <li class="user-menu__item user-menu__item--login">
+            <a href="#">Login</a>
+          </li>
+          <li class="user-menu__item user-menu__item--cart">
+            <a href="#">
+              <span>Cart</span>
+              <span class="user-menu__cart-count">0</span>
+              <svg class="user-menu__icon" width="20" height="18">
+                <use href="/img/sprite-auto.svg#icon-cart"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
-      <ul class="page-header__user-menu user-menu">
-        <li class="user-menu__item user-menu__item--login">
-          <a href="#">Login</a>
-        </li>
-        <li class="user-menu__item user-menu__item--cart">
-          <a href="#">Cart</a>
-          <span class="user-menu__cart-count">0</span>
-        </li>
-      </ul>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+      <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="#">What’s new</a>
@@ -57,6 +64,12 @@
             <a href="#">Earrings</a>
           </li>
         </ul>
+        <ul class="main-nav__tab-list">
+          <li class="main-nav__tab-item"><a href="#">About CH</a></li>
+          <li class="main-nav__tab-item"><a href="#">Stores & Hours</a></li>
+          <li class="main-nav__tab-item"><a href="#">Contact Us</a></li>
+          <li class="main-nav__tab-item"><a href="#">Login</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -64,19 +77,8 @@
     <h1 class="visually-hidden">Online jewelry store</h1>
     <section class="hero">
       <h2 class="visually-hidden">Main banner</h2>
-      <div class="hero__wrap container">
-        <picture>
-          <!-- 1x: 705px; 2x: 1410px -->
-          <source media="(max-width: 1024px)" srcset="img/intro-tablet.jpg 1x, img/intro-tablet@2x.jpg 2x">
-          <!-- 1x: 320px; 2x: 640px -->
-          <source media="(max-width: 767px)" srcset="img/intro-main-mobile@1x.jpg 1x, img/intro-main-mobile@2x.jpg 2x">
-          <!-- 1x: 1366px; 2x: 2732px -->
-          <img src="img/intro-desktop@1x.jpg" srcset="img/img/intro-desktop@2x.jpg 2x" width="1366" height="463"
-            alt="Image of exquisite jewelry rings and necklaces for women">
-        </picture>
-        <p class="hero__title">perfection</p>
-        <p class="hero__description">made to be yours</p>
-      </div>
+      <p class="hero__title">perfection</p>
+      <p class="hero__description">made to be yours</p>
     </section>
     <section class="products">
       <div class="container products__wrap">

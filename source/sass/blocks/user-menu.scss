@@ -1,0 +1,44 @@
+.user-menu {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 120px;
+
+  @include below ($tablet-width) {
+    min-width: 0;
+  }
+}
+
+.user-menu__item {
+  flex: 1 1 auto;
+  a {
+    @include font-size(0.87, 1.5, 500);
+    color: $primary-text-color;
+  }
+
+  svg {
+    display: none;
+  }
+
+  @include below ($tablet-width) {
+    flex: 0 0 auto;
+    margin-left: auto;
+
+    &--login {
+      display: none;
+    }
+
+    &--cart {
+      svg {
+        display: inline-block        ;
+        color: $basic-black;
+        fill: $basic-white;
+      }
+
+      a {
+        font-size: 0;
+      };
+    }
+  }
+}

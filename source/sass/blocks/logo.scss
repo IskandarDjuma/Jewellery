@@ -1,0 +1,12 @@
+.logo {
+  margin: 0 auto;
+
+  svg {
+    color: $accent-color;
+    transition: ease-in 0.2s;
+
+    &:hover {
+      color: rgba($color: $accent-color, $alpha: 0.5);
+    }
+  }
+}

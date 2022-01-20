@@ -10,7 +10,7 @@
     <header class="page-header">
       <div class="container">
         <form class="page-herader__form" action="https://echo.htmlacademy.ru/courses" method="post">
-          <label class="visually-hidden" for="search">enter the search text</label>
+          <label class="visually-hidden" for="search-text">enter the search text</label>
           <input type="search" name="search-text" id="search-text" placeholder="Type here to search" autocomplete="off">
           <div class="buttons">
             <input type="submit" value="Поиск">
@@ -61,6 +61,7 @@
     <main>
       <h1 class="visually-hidden">Jewelry store catalog</h1>
     <section class="hero-inner">
+      <h2 class="visually-hidden">The main banner of the catalog page</h2>
       <div class="hero-inner container">
         <picture>
            <!-- 1x: 705px; 2x: 1410px -->
@@ -102,20 +103,16 @@
           <button class="accordion__button" type="button">Material</button>
           <ul class="accordion__content">
             <li class="filter__option filter__checkbox">
-              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="necklaces" id="necklaces" checked="">
-              <label for="necklaces">Necklaces</label>
+              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="gold" id="gold" checked="">
+              <label for="gold">Gold</label>
             </li>
             <li class="filter__option filter__checkbox">
-              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="chokers" id="chokers" checked="">
-              <label for="chokers">Chokerss</label>
+              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="stone" id="stone" checked="">
+              <label for="stone">Stone</label>
             </li>
             <li class="filter__option filter__checkbox">
-              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="rings" id="rings">
-              <label for="rings">Rings</label>
-            </li>
-            <li class="filter__option filter__checkbox">
-              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="earrings" id="earrings" checked="">
-              <label for="earrings">Earrings</label>
+              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="silver" id="silver">
+              <label for="silver">Silver</label>
             </li>
           </ul>
         </fieldset>
@@ -123,43 +120,34 @@
           <button class="accordion__button" type="button">Collection</button>
           <ul class="accordion__content">
             <li class="filter__option filter__checkbox">
-              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="necklaces" id="necklaces" checked="">
-              <label for="necklaces">Necklaces</label>
+              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="tiffany" id="tiffany" checked="">
+              <label for="tiffany">Tiffany</label>
             </li>
             <li class="filter__option filter__checkbox">
-              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="chokers" id="chokers" checked="">
-              <label for="chokers">Chokerss</label>
-            </li>
-            <li class="filter__option filter__checkbox">
-              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="rings" id="rings">
-              <label for="rings">Rings</label>
-            </li>
-            <li class="filter__option filter__checkbox">
-              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="earrings" id="earrings" checked="">
-              <label for="earrings">Earrings</label>
+              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="faberge" id="faberge" checked="">
+              <label for="faberge">Faberge</label>
             </li>
           </ul>
         </fieldset>
         <fieldset>
           <button class="accordion__button" type="button">Price</button>
-          <ul class="accordion__content">
-            <li class="filter__option filter__checkbox">
-              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="necklaces" id="necklaces" checked="">
-              <label for="necklaces">Necklaces</label>
-            </li>
-            <li class="filter__option filter__checkbox">
-              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="chokers" id="chokers" checked="">
-              <label for="chokers">Chokerss</label>
-            </li>
-            <li class="filter__option filter__checkbox">
-              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="rings" id="rings">
-              <label for="rings">Rings</label>
-            </li>
-            <li class="filter__option filter__checkbox">
-              <input class="visually-hidden filter__input-checkbox filter__input" type="checkbox" name="earrings" id="earrings" checked="">
-              <label for="earrings">Earrings</label>
-            </li>
-          </ul>
+          <div class=" range range__filter">
+            <div class="range__controls">
+              <div class="range__scale">
+                <div class="range__bar"></div>
+              </div>
+              <div class="range__toggle range__toggle--min"></div>
+              <div class="range__toggle range__toggle--max"></div>
+            </div>
+            <div class="price-controls">
+              <label class="price-controls__min">
+               <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+              <input type="number" name="max-price" value="15000">
+              </label>
+            </div>
+          </div>
         </fieldset>
         <button type="submit" class="filter__button button">Apply</button>
         <button type="reset" class="filter__button button">Clear All</button>
@@ -299,7 +287,7 @@
         <div class="news">
           <h3>The good stuff in your inbox</h3>
           <p>News and updates from CH. No spam, we promise.</p>
-          <form action="" method="get">
+          <form action="https://echo.htmlacademy.ru/courses" method="get">
             <label class="visually-hidden" for="mail"></label>
             <input type="text" placeholder="Your E-mail" id="mail" name="mail" required="">
             <button type="submit">Sign Up</button>
