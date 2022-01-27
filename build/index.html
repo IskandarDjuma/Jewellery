@@ -40,7 +40,7 @@
               <span>Cart</span>
               <span class="user-menu__cart-count">0</span>
               <svg class="user-menu__icon" width="20" height="18">
-                <use href="/img/sprite-auto.svg#icon-cart"></use>
+                <use href="img/sprite-auto.svg#icon-cart"></use>
               </svg>
             </a>
           </li>
@@ -81,100 +81,88 @@
       <p class="hero__description">made to be yours</p>
     </section>
     <section class="products">
-      <div class="container products__wrap">
+      <div class="container products__wrap swiper-container">
         <h2>New In</h2>
-        <p>
+        <p class="products__link">
           <a href="catalog.html">Shop Now</a>
         </p>
-        <ul class="products__list">
-          <li class="products__item">
+        <ul class="products__list swiper-wrapper">
+          <li class="products__item swiper-slide">
             <a href="">
               <picture>
                 <img src="img/purple-necklace@1x.jpg" srcset="img/purple-necklace@2x.jpg 2x" width="270" height="284" alt="Image of a chain with stone amulet">
               </picture>
-              <p class="products__title">Necklace with amethyst</p>
-              <p class="products__category"><span>$</span> 145</p>
+              <p class="products__title">Necklace with amethyst <span>$145</span></p>
             </a>
           </li>
-          <li class="products__item">
+          <li class="products__item swiper-slide">
             <a href="#">
               <picture>
                 <img src="img/layered-choker-necklace@1x.jpg" srcset="img/layered-choker-necklace@2x.jpg 2x" width="270" height="284" alt="Decoration on the neck with a leather strap">
               </picture>
-              <p class="products__title">Layered сhoker</p>
-              <p class="products__category"><span>$</span> 115</p>
+              <p class="products__title">Layered сhoker <span>$115</span></p>
             </a>
           </li>
-          <li class="products__item">
+          <li class="products__item swiper-slide">
             <a href="#">
               <picture>
                 <img src="img/dainty-gold-necklace@1x.jpg" srcset="img/dainty-gold-necklace@2x.jpg" width="270" height="284" alt="Triple Golden Chain">
               </picture>
-              <p class="products__title">Gold chain</p>
-              <p class="products__category"><span>$</span> 215</p>
+              <p class="products__title">Gold chain <span>$215</span></p>
             </a>
           </li>
-          <li class="products__item">
+          <li class="products__item swiper-slide">
             <a href="#">
               <picture>
                 <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="earrings with a galaxy-colored stone">
               </picture>
-              <p class="products__title">Galaxy earrings</p>
-              <p class="products__category"><span>$</span> 95</p>
+              <p class="products__title">Galaxy earrings <span>$95</span></p>
             </a>
           </li>
         </ul>
         <ul class="products__pagination pagination">
-          <li class="paginaton__item paginaton__item--current">
-            <a href="#">1</a>
-          </li>
-          <li class="paginaton__item">
-            <a href="#">2</a>
-          </li>
-          <li class="paginaton__item">
-            <a href="#">3</a>
-          </li>
+          <li><button type="button">1</button></li>
+          <li><button type="button">2</button></li>
+          <li><button type="button">3</button></li>
         </ul>
-        <div class="products__buttons">
-          <button class="products__buttons-prev" type="button"></button>
-          <button class="products__buttons-next" type="button"></button>
-        </div>
+        <button class="products__button products__button--prev" type="button"></button>
+        <button class="products__button products__button--next" type="button"></button>
       </div>
     </section>
     <section class="blog">
       <div class="container blog__wrap">
         <h2>Blog</h2>
-        <p>
+        <p class="blog__link">
           <a href="#">Read All</a>
         </p>
         <ul class="blog__list">
-          <li class="blog__item">
+          <li class="blog__item blog__item--small">
             <picture>
-              <img src="img/blog-care-desktop@1x.jpg" srcset="blog-care-desktop@2x.jpg" alt="the image of jewelry laid out on the table" width="285" height="300">
+              <img src="img/blog-care-desktop@1x.jpg" srcset="img/blog-care-desktop@2x.jpg" alt="the image of jewelry laid out on the table" width="285" height="300">
             </picture>
             <div class="blog__text-block">
               <time datetime="2019-09-30">September 30, 2019</time>
-              <h3>How to care for your jewellery</h3>
+              <h3 class="fade">How to care for your jewellery</h3>
               <a href="#">Read Article</a>
             </div>
           </li>
-          <li class="blog__item">
+          <li class="blog__item blog__item--small">
             <picture>
-              <img src="img/blog-power-desktop@1x.jpg" srcset="blog-power-desktop@2x.jpg 2x" alt="ewelry in the form of petals with a gold tip" width="285" height="300">
+              <img src="img/blog-power-desktop@1x.jpg" srcset="img/blog-power-desktop@2x.jpg" alt="ewelry in the form of petals with a gold tip" width="285" height="300">
             </picture>
             <div class="blog__text-block">
               <time datetime="2019-09-23">September 23, 2019</time>
-              <h3>Power of crystals</h3>
+              <h3 class="fade">Power of crystals</h3>
               <a href="#">Read Article</a>
             </div>
           </li>
-          <li class="blog__item">
+          <li class="blog__item blog__item--big">
             <picture>
-              <img src="img/blog-trends-desktop@1x.jpg" srcset="blog-trends-desktop@2x.jpg 2x" alt="the image of the girl's hands decorated with jewelry" width="570" height="630">
+              <img src="img/blog-trends-desktop@1x.jpg" srcset="img/blog-trends-desktop@2x.jpg" alt="the image of the girl's hands decorated with jewelry" width="570" height="630">
             </picture>
             <div class="blog__text-block">
               <time datetime="2019-09-16">September 16, 2019</time>
-              <h3>AW 19 trends</h3>
+              <h3 class="fade"> AW 19 trends</h3>
               <a href="#">Read Article</a>
             </div>
           </li>
@@ -185,22 +173,22 @@
       <div class="container faq__wrap">
         <h2>Frequently asked questions</h2>
         <ul class="faq__list accordion accordion--nojs">
-          <li class="faq__item">
+          <li class="faq__item accordion__item">
             <button class="accordion__button">What materials are the jewellery made of?</button>
             <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
               contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="faq__item">
+          <li class="faq__item accordion__item">
             <button class="accordion__button">Which countries do you deliver to?</button>
             <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
               contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="faq__item">
+          <li class="faq__item accordion__item">
             <button class="accordion__button">What are the payment methods?</button>
             <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
               contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="faq__item">
+          <li class="faq__item accordion__item">
             <button class="accordion__button">Can I return the jewellery if it didn’t fit me?</button>
             <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
               contains precious and semiprecious stones and crystals.</p>
@@ -211,41 +199,59 @@
     <section class="inst">
       <div class="container inst__wrap">
         <h2>@Chjewellery</h2>
+        <p class="inst__link">
+          <a href="#">Follow Us</a>
+        </p>
         <ul class="inst__list">
-          <li class="inst__item">
+          <li class="inst__item inst__item--1">
+            <a href="#">
+
+            </a>
             <picture>
               <img src="img/inst-1-desktop@1x.jpg" srcset="img/inst-1-desktop@2x.jpg 2x" alt="square earrings" width="230" height="230">
             </picture>
           </li>
-          <li class="inst__item">
-            <picture>
-              <img src="img/inst-2-desktop@1x.jpg" srcset="img/inst-2-desktop@2x.jpg 2x" alt="earrings with three multicolored stones" width="230" height="150">
-            </picture>
+          <li class="inst__item inst__item--2">
+            <a href="#">
+              <picture>
+                <img src="img/inst-2-desktop@1x.jpg" srcset="img/inst-2-desktop@2x.jpg 2x" alt="earrings with three multicolored stones" width="230" height="150">
+              </picture>
+            </a>
           </li>
           <li class="inst__item">
-            <picture>
-              <img src="img/inst-3-desktop@1x.jpg" srcset="img/inst-3-desktop@2x.jpg 2x" alt="image of a model with earrings in the form of petals" width="399" height="412">
-            </picture>
+            <a href="#">
+              <picture>
+                <img src="img/inst-3-desktop@1x.jpg" srcset="img/inst-3-desktop@2x.jpg 2x" alt="image of a model with earrings in the form of petals" width="399" height="412">
+              </picture>
+            </a>
           </li>
           <li class="inst__item">
-            <picture>
-              <img src="img/inst-4-desktop@1x.jpg" srcset="img/inst-4-desktop@2x.jpg 2x" alt="pearl stone necklace and earrings" width="230" height="230">
-            </picture>
+            <a href="#">
+              <picture>
+                <img src="img/inst-4-desktop@1x.jpg" srcset="img/inst-4-desktop@2x.jpg 2x" alt="pearl stone necklace and earrings" width="230" height="230">
+              </picture>
+            </a>
           </li>
           <li class="inst__item">
-            <picture>
-              <img src="img/inst-5-desktop@1x.jpg" srcset="img/inst-5-desktop@2x.jpg 2x" alt="gold chains, earrings and bracelet" width="230" height="150">
-            </picture>
+            <a href="#">
+              <picture>
+                <img src="img/inst-5-desktop@1x.jpg" srcset="img/inst-5-desktop@2x.jpg 2x" alt="gold chains, earrings and bracelet" width="230" height="150">
+              </picture>
+            </a>
           </li>
           <li class="inst__item">
-            <picture>
-              <img src="img/inst-6-desktop@1x.jpg" srcset="img/inst-6-desktop@2x.jpg 2x" alt="braided earrings" width="230" height="230">
-            </picture>
+            <a href="#">
+              <picture>
+                <img src="img/inst-6-desktop@1x.jpg" srcset="img/inst-6-desktop@2x.jpg 2x" alt="braided earrings" width="230" height="230">
+              </picture>
+            </a>
           </li>
           <li class="inst__item">
-            <picture>
-              <img src="img/inst-7-desktop@1x.jpg" srcset="img/inst-7-desktop@2x.jpg 2x" alt="model's hands with different rings on their hands" width="230" height="150">
-            </picture>
+            <a href="#">
+              <picture>
+                <img src="img/inst-7-desktop@1x.jpg" srcset="img/inst-7-desktop@2x.jpg 2x" alt="model's hands with different rings on their hands" width="230" height="150">
+              </picture>
+            </a>
           </li>
         </ul>
       </div>
@@ -256,10 +262,14 @@
       <div class="news">
         <h3>The good stuff in your inbox</h3>
         <p>News and updates from CH. No spam, we promise.</p>
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <form class="news__form" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="mail"></label>
           <input type="text" placeholder="Your E-mail" id="mail" name="mail" required="">
-          <button type="submit">Sign Up</button>
+          <button type="submit">Sign Up
+            <svg width="29" height="9">
+              <use href="/img/sprite-auto.svg#icon-mail"></use>
+            </svg>
+          </button>
         </form>
       </div>
       <div class="footer-nav">
@@ -360,7 +370,9 @@
     </form>
     <button class="modal__close" type="button" aria-label="Закрыть"></button>
   </section>
-  <script src="js/script.js"></script>
+  <script src="js/script.js" type="module"></script>
+  <script src="js/vendor.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>

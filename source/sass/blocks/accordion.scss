@@ -1,0 +1,57 @@
+.accordion__item {
+  position: relative;
+
+  p {
+    display: none;
+  }
+}
+
+.accordion--active {
+  .accordion__content {
+    display: block;
+  }
+}
+
+.accordion--nojs {
+  .accordion__content {
+    display: block;
+  }
+}
+
+.accordion__button {
+  @include button-reset;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 15px;
+    height: 8px;
+    border: none;
+    background: none;
+    background-image: url("../img/accord-icon.svg");
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+  }
+
+  @include below ($tablet-width) {
+    &::before {
+      right: 0;
+      width: 23px;
+      height: 12px;
+      background-size: cover;
+    }
+  }
+
+  @include below ($mobile-width) {
+    &::before {
+      top: 0;
+    }
+  }
+}
+
+.accordion__button--active::before {
+  transform: rotate(360deg);
+}

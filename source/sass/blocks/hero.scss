@@ -12,9 +12,30 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 130px;
+
+  @include retina () {
+    background-image: url("../img/intro-desktop@2x.jpg");
+  }
 
   p {
     margin: 0;
+  }
+
+  @include below ($tablet-width) {
+    background-image: url("../img/intro-tablet.jpg");
+
+    @include retina () {
+      background-image: url("../img/intro-tablet@2x.jpg");
+    }
+  }
+
+  @include below ($mobile-width) {
+    background-image: url("../img/intro-main-mobile@1x.jpg");
+
+    @include retina () {
+      background-image: url("../img/intro-main-mobile@2x.jpg");
+    }
   }
 }
 
@@ -22,9 +43,17 @@
   @include font-size (2.8em, 1.5em, 700);
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  @include below ($mobile-width) {
+    font-size: 2.25em;
+  }
 }
 
 .hero__description {
   @include font-size (2.37em, 1.5em, 400);
   font-style: italic;
+
+  @include below ($mobile-width) {
+    font-size: 2.12em;
+  }
 }

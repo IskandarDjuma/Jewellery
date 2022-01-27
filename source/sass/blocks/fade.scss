@@ -1,0 +1,18 @@
+.fade {
+  position: relative;
+  height: 4em;
+}
+
+.fade::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 1.2em;
+
+  text-align: right;
+
+  background: linear-gradient(to right, rgba(255, 255, 255, 0),
+rgba(240, 234, 228, 1) 50%);
+}

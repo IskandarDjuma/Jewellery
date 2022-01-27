@@ -1,0 +1,22 @@
+.page-footer {
+  background-color: $basic-black;
+  padding: 100px 0;
+
+  @include below ($tablet-width) {
+    padding: 60px 0;
+  }
+}
+
+.page-footer__wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include below ($tablet-width) {
+    gap: 50px 0;
+    padding-right: 160px;
+  }
+
+  @include below ($mobile-width) {
+    padding-right: 0;
+  }
+}

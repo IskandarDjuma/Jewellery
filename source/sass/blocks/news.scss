@@ -1,0 +1,66 @@
+.news {
+  flex: 0 1 auto;
+  padding-right: 80px;
+
+  h3 {
+    @include font-size (2.12em, 1.5em, 700);
+    font-family: $secondary-text;
+    color: $basic-white;
+    margin: 0;
+    padding-bottom: 25px;
+  }
+
+  p {
+    color: $basic-grey;
+    margin: 0;
+    padding-bottom: 50px;
+  }
+
+  @include below ($tablet-width) {
+    flex: 1 1 auto;
+    padding-right: 0;
+  }
+}
+
+.news__form {
+  position: relative;
+  border-bottom: 1px solid $basic-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  input {
+    border: 0;
+    background-color: $transparent;
+    color: $basic-white;
+    padding: 1em;
+    width: 60%;
+
+    &::placeholder {
+      @include font-size (0.87em, 1.5em, 500);
+      color: $basic-grey;
+    }
+  }
+
+  button {
+    @include button-reset;
+    color: $basic-white;
+    font-weight: 500;
+
+    svg {
+      margin-left: 21px;
+      margin-top: 5px;
+    }
+
+    &:hover,
+    &:hover svg {
+      color: $accent-color;
+    }
+
+    &:focus,
+    &:focus svg {
+      opacity: 0.5;;
+    }
+  }
+
+}

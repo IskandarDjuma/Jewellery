@@ -1,5 +1,6 @@
 .page-header {
   position: relative;
+  margin-bottom: 20px;
 
   &::before {
     content: "";
@@ -113,6 +114,7 @@
       align-items: flex-start;
       background-color: $accent-color;
       overflow-y: scroll;
+      z-index: 1;
     }
 
     .page-header__search {

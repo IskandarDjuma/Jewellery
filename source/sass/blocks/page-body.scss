@@ -1,11 +1,11 @@
 .page-body {
   font-size: 100%;
+  font-family: $primary-text;
   margin: 0;
   min-width: 320px;
   height: 100%;
   color: $primary-text-color;
   background-color: $basic-white;
-  font-family: $primary-text;
 }
 
 .page-body__wrapper {

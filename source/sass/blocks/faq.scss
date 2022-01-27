@@ -1,0 +1,68 @@
+.faq {
+  margin-bottom: 100px;
+}
+
+.faq__wrap {
+  h2 {
+    @include font-size (2.12em, 1.5em, 700);
+    font-family: $secondary-text;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 100px;
+  }
+
+  button {
+    @include font-size (1.12em, 1.5em, 500);
+    text-align: center;
+    margin: 0;
+    width: 100%;
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+
+  @include below ($tablet-width) {
+    h2 {
+      margin-bottom: 60px;
+    }
+  }
+
+  @include below ($mobile-width) {
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    button {
+      font-size: inherit;
+      text-align: left;
+      padding-right: 83px;
+    }
+  }
+}
+
+.faq__list {
+  @include list-reset;
+}
+
+.faq__item {
+  border: 1px solid $accent-color;
+  padding: 38px 50px 50px;
+
+  p {
+    width: 50%;
+  }
+
+
+  @include below ($mobile-width) {
+    padding: 22px 25px;
+
+    p {
+      font-size: 0.87em;
+    }
+  }
+}

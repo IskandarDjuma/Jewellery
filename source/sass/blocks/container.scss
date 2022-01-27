@@ -1,12 +1,12 @@
 .container {
   min-width: 1024px;
-  max-width: 1480px;
+  max-width: 1210px;
   margin: 0 auto;
   padding: 0 30px;
 
   @include below($tablet-width) {
     min-width: 768px;
-    padding: 0 25px;
+    padding: 0 45px;
   }
 
   @include below($mobile-width) {
