@@ -23,7 +23,7 @@ import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
 
   // Swiper
 
-  const swiper = new Swiper('.mySwiper', {
+  const swiper = new Swiper('.swiper-container', {
     slidesPerView: 2,
     spaceBetween: 30,
     slidesPerGroup: 2,
@@ -126,7 +126,7 @@ import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
 
   if (accordionsNojs) {
     accordionsNojs.classList.remove('accordion--nojs');
-    };
+  };
 
 
   if (accordionButtons) {
@@ -176,29 +176,29 @@ import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
     });
   }
 
-// Slider Goods
+  // Slider Goods
 
-const photos = [
-  'img/large/gold-necklace-large.jpg',
-  'img/large/pretty-gold-large.jpg',
-  'img/large/womens-necklace-large.jpg'
-];
+  const photos = [
+    'img/large/gold-necklace-large.jpg',
+    'img/large/pretty-gold-large.jpg',
+    'img/large/womens-necklace-large.jpg'
+  ];
 
-const thumbnails = document.querySelectorAll('.goods__photo-preview');
-const fullPhoto = document.querySelector('.goods__review-full');
+  const thumbnails = document.querySelectorAll('.goods__photo-preview');
+  const fullPhoto = document.querySelector('.goods__review-full');
 
-const addThumbnailClickHandler = function (thumbnail, photo) {
-  thumbnail.addEventListener('click', function () {
-    fullPhoto.src = photo;
-  });
-};
+  const addThumbnailClickHandler = function (thumbnail, photo) {
+    thumbnail.addEventListener('click', function () {
+      fullPhoto.src = photo;
+    });
+  };
 
-for (var i = 0; i < thumbnails.length; i++) {
-  addThumbnailClickHandler(thumbnails[i], photos[i]);
-}
+  for (var i = 0; i < thumbnails.length; i++) {
+    addThumbnailClickHandler(thumbnails[i], photos[i]);
+  }
 
 
-// Modal
+  // Modal
 
   var modalLink = document.querySelector('.user-menu__button');
   var feedbackPopup = document.querySelector('.modal-login');
@@ -269,15 +269,19 @@ for (var i = 0; i < thumbnails.length; i++) {
   const popupCart = document.querySelector(".modal-cart");
   const cartClose = popupCart.querySelector(".modal__close");
 
-  cartLink.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popupCart.classList.add("modal__show");
-  });
+  if (cartLink) {
+    cartLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popupCart.classList.add("modal__show");
+    });
+  }
 
-  cartClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popupCart.classList.remove("modal__show");
-  });
+  if (cartClose) {
+    cartClose.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popupCart.classList.remove("modal__show");
+    });
+  }
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {

@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online jewelry store</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/CormorantGaramond-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/CormorantGaramond-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page-body">
@@ -22,7 +26,8 @@
             <use xlink:href="img/sprite-auto.svg#icon-search"></use>
           </svg>
           <label class="visually-hidden" for="search-text">enter the search text</label>
-          <input class="search__field" type="search" name="search-text" id="search-text" placeholder="Type here to search" autocomplete="off">
+          <input class="search__field" type="search" name="search-text" id="search-text"
+            placeholder="Type here to search" autocomplete="off">
         </form>
         <div class="page-header__logo logo">
           <a href="#">
@@ -33,7 +38,7 @@
         </div>
         <ul class="page-header__user-menu user-menu">
           <li class="user-menu__item user-menu__item--login">
-            <button class="user-menu__button" type="button">login</button>
+            <button class="user-menu__button" type="button">Login</button>
           </li>
           <li class="user-menu__item user-menu__item--cart">
             <a href="#">
@@ -80,24 +85,31 @@
       <p class="hero__title">perfection</p>
       <p class="hero__description">made to be yours</p>
     </section>
-    <section class="products">
-      <div class="container products__wrap swiper-container">
+    <section class="products container">
+      <div class=" products__wrap swiper-container">
         <h2>New In</h2>
         <p class="products__link">
           <a href="catalog.html">Shop Now</a>
         </p>
         <ul class="products__list swiper-wrapper">
           <li class="products__item swiper-slide">
-            <a href="">
+            <a href="product.html">
               <picture>
-                <img src="img/purple-necklace@1x.jpg" srcset="img/purple-necklace@2x.jpg 2x" width="270" height="284" alt="Image of a chain with stone amulet">
+                <!-- 1x: 270 ; 2x: 540 -->
+                <source type="image/webp" srcset="img/purple-necklace@1x.webp 1x, img/purple-necklace@2x.webp 2x">
+                <img src="img/purple-necklace@1x.jpg" srcset="img/purple-necklace@2x.jpg 2x" width="270" height="284"
+                  alt="Image of a chain with stone amulet">
               </picture>
               <p class="products__title">Necklace with amethyst <span>$145</span></p>
             </a>
           </li>
           <li class="products__item swiper-slide">
-            <a href="#">
+            <a href="product.html">
               <picture>
+                <!-- 1x: 270 ; 2x: 540 -->
+                <!-- 1x: 270 ; 2x: 540 -->
+                <source type="image/webp"
+                  srcset="img/layered-choker-necklace@1x.webp 1x, img/layered-choker-necklace@2x.webp 2x">
                 <img src="img/layered-choker-necklace@1x.jpg" srcset="img/layered-choker-necklace@2x.jpg 2x" width="270"
                   height="284" alt="Decoration on the neck with a leather strap">
               </picture>
@@ -105,8 +117,12 @@
             </a>
           </li>
           <li class="products__item swiper-slide">
-            <a href="#">
+            <a href="product.html">
               <picture>
+                <!-- 1x: 270 ; 2x: 540 -->
+                <!-- 1x: 270 ; 2x: 540 -->
+                <source type="image/webp"
+                  srcset="img/dainty-gold-necklace@1x.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
                 <img src="img/dainty-gold-necklace@1x.jpg" srcset="img/dainty-gold-necklace@2x.jpg" width="270"
                   height="284" alt="Triple Golden Chain">
               </picture>
@@ -114,21 +130,25 @@
             </a>
           </li>
           <li class="products__item swiper-slide">
-            <a href="#">
+            <a href="product.html">
               <picture>
-                <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" width="270" height="284" alt="earrings with a galaxy-colored stone">
+                <!-- 1x: 270 ; 2x: 540 -->
+                <!-- 1x: 270 ; 2x: 540 -->
+                <source type="image/webp" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings@2x.webp 2x">
+                <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" width="270" height="284"
+                  alt="earrings with a galaxy-colored stone">
               </picture>
               <p class="products__title">Galaxy earrings <span>$95</span></p>
             </a>
           </li>
         </ul>
-        <ul class="products__pagination pagination">
+        <ul class="products__pagination pagination swiper-pagination">
           <li><button type="button">1</button></li>
           <li><button type="button">2</button></li>
-          <li ><button type="button">3</button></li>
+          <li><button type="button">3</button></li>
         </ul>
-        <button class="products__button products__button--prev" type="button"></button>
-        <button class="products__button products__button--next" type="button"></button>
+        <button class="products__button products__button--prev swiper-button-prev" type="button"></button>
+        <button class="products__button products__button--next swiper-button-next" type="button"></button>
       </div>
     </section>
     <section class="blog">
@@ -140,7 +160,10 @@
         <ul class="blog__list">
           <li class="blog__item blog__item--small">
             <picture>
-              <img src="img/blog-care-desktop@1x.jpg" srcset="img/blog-care-desktop@2x.jpg" alt="the image of jewelry laid out on the table" width="285" height="300">
+              <!-- 1x: 285 ; 2x: 570 -->
+              <source type="image/webp" srcset="img/blog-care-desktop@1x.webp 1x, img/blog-care-desktop@2x.webp 2x">
+              <img src="img/blog-care-desktop@1x.jpg" srcset="img/blog-care-desktop@2x.jpg"
+                alt="the image of jewelry laid out on the table" width="285" height="300">
             </picture>
             <div class="blog__text-block">
               <time datetime="2019-09-30">September 30, 2019</time>
@@ -148,19 +171,23 @@
               <a href="#">Read Article</a>
             </div>
           </li>
-          <li class="blog__item blog__item--small">
-            <picture>
-              <img src="img/blog-power-desktop@1x.jpg" srcset="img/blog-power-desktop@2x.jpg"
-                alt="ewelry in the form of petals with a gold tip" width="285" height="300">
-            </picture>
+          <li class="blog__item blog__item--small blog__item--2">
             <div class="blog__text-block">
               <time datetime="2019-09-23">September 23, 2019</time>
               <h3 class="fade">Power of crystals</h3>
               <a href="#">Read Article</a>
             </div>
+            <picture>
+              <!-- 1x: 285 ; 2x: 570 -->
+              <source type="image/webp" srcset="img/blog-power-desktop@1x.webp 1x, img/blog-power-desktop@2x.webp 2x">
+              <img src="img/blog-power-desktop@1x.jpg" srcset="img/blog-power-desktop@2x.jpg"
+                alt="ewelry in the form of petals with a gold tip" width="285" height="300">
+            </picture>
           </li>
           <li class="blog__item blog__item--big">
             <picture>
+              <!-- 1x: 570 ; 2x: 1140 -->
+              <source type="image/webp" srcset="img/blog-trends-desktop@1x.webp 1x, img/blog-trends-desktop@2x.webp 2x">
               <img src="img/blog-trends-desktop@1x.jpg" srcset="img/blog-trends-desktop@2x.jpg"
                 alt="the image of the girl's hands decorated with jewelry" width="570" height="630">
             </picture>
@@ -178,22 +205,22 @@
         <h2>Frequently asked questions</h2>
         <ul class="faq__list accordion accordion--nojs">
           <li class="faq__item accordion__item">
-            <button class="accordion__button">What materials are the jewellery made of?</button>
+            <button class="accordion__button faq__button">What materials are the jewellery made of?</button>
             <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
               contains precious and semiprecious stones and crystals.</p>
           </li>
           <li class="faq__item accordion__item">
-            <button class="accordion__button">Which countries do you deliver to?</button>
+            <button class="accordion__button faq__button">Which countries do you deliver to?</button>
             <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
               contains precious and semiprecious stones and crystals.</p>
           </li>
           <li class="faq__item accordion__item">
-            <button class="accordion__button">What are the payment methods?</button>
+            <button class="accordion__button faq__button">What are the payment methods?</button>
             <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
               contains precious and semiprecious stones and crystals.</p>
           </li>
           <li class="faq__item accordion__item">
-            <button class="accordion__button">Can I return the jewellery if it didn’t fit me?</button>
+            <button class="accordion__button faq__button">Can I return the jewellery if it didn’t fit me?</button>
             <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
               contains precious and semiprecious stones and crystals.</p>
           </li>
@@ -209,16 +236,19 @@
         <ul class="inst__list">
           <li class="inst__item inst__item--1">
             <a href="#">
-
+              <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="img/inst-1-desktop@1x.webp 1x, img/inst-1-desktop@2x.webp 2x">
+                <img src="img/inst-1-desktop@1x.jpg" srcset="img/inst-1-desktop@2x.jpg 2x" alt="square earrings"
+                  width="230" height="230">
+              </picture>
             </a>
-            <picture>
-              <img src="img/inst-1-desktop@1x.jpg" srcset="img/inst-1-desktop@2x.jpg 2x" alt="square earrings"
-                width="230" height="230">
-            </picture>
           </li>
           <li class="inst__item inst__item--2">
             <a href="#">
               <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="img/inst-2-desktop@1x.webp 1x, img/inst-2-desktop@2x.webp 2x">
                 <img src="img/inst-2-desktop@1x.jpg" srcset="img/inst-2-desktop@2x.jpg 2x"
                   alt="earrings with three multicolored stones" width="230" height="150">
               </picture>
@@ -227,6 +257,8 @@
           <li class="inst__item">
             <a href="#">
               <picture>
+                <!-- 1x: 399 ; 2x: 798 -->
+                <source type="image/webp" srcset="img/inst-3-desktop@1x.webp 1x, img/inst-3-desktop@2x.webp 2x">
                 <img src="img/inst-3-desktop@1x.jpg" srcset="img/inst-3-desktop@2x.jpg 2x"
                   alt="image of a model with earrings in the form of petals" width="399" height="412">
               </picture>
@@ -235,6 +267,8 @@
           <li class="inst__item">
             <a href="#">
               <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="img/inst-4-desktop@1x.webp 1x, img/inst-4-desktop@2x.webp 2x">
                 <img src="img/inst-4-desktop@1x.jpg" srcset="img/inst-4-desktop@2x.jpg 2x"
                   alt="pearl stone necklace and earrings" width="230" height="230">
               </picture>
@@ -243,6 +277,8 @@
           <li class="inst__item">
             <a href="#">
               <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="img/inst-5-desktop@1x.webp 1x, img/inst-5-desktop@2x.webp 2x">
                 <img src="img/inst-5-desktop@1x.jpg" srcset="img/inst-5-desktop@2x.jpg 2x"
                   alt="gold chains, earrings and bracelet" width="230" height="150">
               </picture>
@@ -251,6 +287,8 @@
           <li class="inst__item">
             <a href="#">
               <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="img/inst-6-desktop@1x.webp 1x, img/inst-6-desktop@2x.webp 2x">
                 <img src="img/inst-6-desktop@1x.jpg" srcset="img/inst-6-desktop@2x.jpg 2x" alt="braided earrings"
                   width="230" height="230">
               </picture>
@@ -259,6 +297,8 @@
           <li class="inst__item">
             <a href="#">
               <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="img/inst-7-desktop@1x.webp 1x, img/inst-7-desktop@2x.webp 2x">
                 <img src="img/inst-7-desktop@1x.jpg" srcset="img/inst-7-desktop@2x.jpg 2x"
                   alt="model's hands with different rings on their hands" width="230" height="150">
               </picture>
@@ -352,6 +392,7 @@
   <section class="modal modal-login modal-overlay">
     <picture>
       <!-- 1x: 430px; 2x: 860px -->
+      <source type="image/webp" srcset="img/intro-modal@1x.webp 1x, img/intro-modal@2x.webp 2x">
       <img src="img/intro-modal@1x.jpg" srcset="img/intro-modal@2x.jpg" alt="
         image of gold cufflinks" width="430" height="138">
     </picture>
@@ -360,7 +401,8 @@
       <h3>Log In</h3>
       <ul class="form__list">
         <li class="form__item form__item--login">
-          <input type="email" name="login-login" data-login-input id="login-login" required minlength="2" placeholder="Your E-mail">
+          <input type="email" name="login-login" data-login-input id="login-login" required minlength="2"
+            placeholder="Your E-mail">
           <label class="visually-hidden" for="login-login"> Enter your email</label>
         </li>
         <li class="form__item form__item--password">
@@ -381,7 +423,7 @@
         </li>
       </ul>
     </form>
-    <button class="modal__close" type="button" aria-label="Закрыть"></button>
+    <button class="modal__close" type="button" aria-label="close"></button>
   </section>
   <script src="js/script.js" type="module"></script>
 

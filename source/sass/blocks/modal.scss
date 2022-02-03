@@ -38,6 +38,11 @@
   &::after {
     transform: rotate(-45deg);
   }
+
+  @include below ($mobile-width) {
+    top: 15px;
+    right: 15px;
+  }
 }
 
 .modal__show {

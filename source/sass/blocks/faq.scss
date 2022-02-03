@@ -1,5 +1,13 @@
 .faq {
-  margin-bottom: 100px;
+  margin-bottom: 110px;
+
+  @include below ($tablet-width) {
+    margin-bottom: 93px;
+  }
+
+  @include below ($mobile-width) {
+    margin-bottom: 44px;
+  }
 }
 
 .faq__wrap {
@@ -8,7 +16,8 @@
     font-family: $secondary-text;
     text-align: center;
     margin: 0;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    letter-spacing: 0.03em;
   }
 
   button {
@@ -28,41 +37,60 @@
 
   @include below ($tablet-width) {
     h2 {
-      margin-bottom: 60px;
+      margin-bottom: 45px;
     }
   }
 
   @include below ($mobile-width) {
     h2 {
-      margin-bottom: 40px;
+      margin-bottom: 18px;
     }
 
     button {
       font-size: inherit;
       text-align: left;
-      padding-right: 83px;
+      padding-bottom: 5px;
     }
   }
 }
 
 .faq__list {
   @include list-reset;
+  padding: 0 100px;
+
+  @include below ($tablet-width) {
+    padding: 0;
+  }
 }
 
 .faq__item {
   border: 1px solid $accent-color;
-  padding: 38px 50px 50px;
+  padding: 42px 42px 38px;
 
   p {
     width: 50%;
+    margin: 0;
   }
 
+  @include below ($tablet-width) {
+    padding: 41px 50px 20px;
+
+    p {
+      width: 98%;
+    }
+  }
 
   @include below ($mobile-width) {
-    padding: 22px 25px;
+    padding: 15px 25px;
 
     p {
       font-size: 0.87em;
     }
+  }
+}
+
+.faq__button {
+  @include below ($tablet-width) {
+    padding-bottom: 20px;
   }
 }

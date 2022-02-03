@@ -11,7 +11,6 @@
 }
 
 .user-menu__item {
-  flex: 1 1 auto;
   a,
   button {
     @include font-size(0.87em, 1.5em, 500);
@@ -47,4 +46,16 @@
       };
     }
   }
+
+  @include below ($mobile-width) {
+    &--cart {
+      position: absolute;
+      top: 20%;
+      right: 0;
+    }
+  }
+}
+
+.user-menu__cart-count {
+  padding-left: 10px;
 }

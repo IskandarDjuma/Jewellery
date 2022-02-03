@@ -1,76 +1,77 @@
 .filters {
   @include below ($tablet-width) {
     margin-bottom: 50px;
+
     &--nojs {
       display: block;
     }
   }
-  }
+}
 
-  .filters--closed .filters__form  {
-     @include below ($tablet-width) {
-        display: none;
-     }
-  }
-
-  .filters--opened .filters__form  {
-    @include below ($tablet-width) {
-       display: block;
-    }
- }
-
-  .filters--opened .filters__form {
-    @include below ($tablet-width) {
-      position: fixed;
-      inset: 0;
-      background-color: $basic-white;
-      z-index: 100;
-      padding-top: 45px;
-    }
-  }
-
-  .filters__toggler {
-    @include font-size (1em, 1.5em, 500);
+.filters--closed .filters__form {
+  @include below ($tablet-width) {
     display: none;
-
   }
+}
 
-  .filters--opened  {
-    @include below ($tablet-width) {
-      .filters__toggler {
-        display: block;
-        position: fixed;
-        top: 0;
-        right: 50%;
-        z-index: 999;
-        width: 33px;
-        height: 33px;
-        cursor: pointer;
-        background-image: url("../img/close-icon.svg");
-        background-repeat: no-repeat;
-        font-size: 0;
-      }
-    }
+.filters--opened .filters__form {
+  @include below ($tablet-width) {
+    display: block;
   }
+}
 
-  .filters--closed .filters__toggler {
-    @include below ($tablet-width) {
+.filters--opened .filters__form {
+  @include below ($tablet-width) {
+    position: fixed;
+    inset: 0;
+    background-color: $basic-white;
+    z-index: 100;
+    padding-top: 45px;
+  }
+}
+
+.filters__toggler {
+  @include font-size (1em, 1.5em, 500);
+  @include button-reset;
+  display: none;
+}
+
+.filters--opened {
+  @include below ($tablet-width) {
+    .filters__toggler {
       display: block;
-      background-color: $accent-color;
-      padding: 1.5em;
-      color: $basic-white;
-      width: 100%;
-
-      &:hover {
-        background-color: darken($accent-color, 10%);
-      }
-
-      &:active {
-        background-color: lighten($accent-color, 10%);
-      }
+      position: fixed;
+      top: 0;
+      right: 50%;
+      z-index: 999;
+      width: 33px;
+      height: 33px;
+      cursor: pointer;
+      background-image: url("../img/close-icon.svg");
+      background-repeat: no-repeat;
+      background-color: $transparent;
+      font-size: 0;
     }
   }
+}
 
+.filters--closed .filters__toggler {
+  @include below ($tablet-width) {
+    display: block;
+    background-color: $accent-color;
+    padding: 1.5em;
+    color: $basic-white;
+    width: 100%;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
+
+    &:active {
+      background-color: lighten($accent-color, 10%);
+    }
+  }
+}
 
 .filters__form fieldset {
   padding: 0;
@@ -85,12 +86,13 @@
   }
 }
 
-.filter__list {
+.filters__list {
   @include list-reset;
+  padding-bottom: 15px;
 }
 
-.filter__option {
-  margin-bottom: 19px;
+.filters__option {
+  margin-bottom: 10px;
   padding-left: 60px;
 
   label {
@@ -102,15 +104,16 @@
   }
 }
 
-.filter__toggle {
+.filters__toggle {
+  @include font-size (1em, 1.5em, 500);
   width: 100%;
   font-weight: 500;
-  margin-top: 28px;
-  margin-bottom: 30px;
+  margin-top: 25px;
+  margin-bottom: 17px;
   padding-left: 25px;
 }
 
-.filter__input-checkbox + label::before {
+.filters__input-checkbox+label::before {
   content: "";
   position: absolute;
   left: -30px;
@@ -120,7 +123,7 @@
   border: 1px solid $accent-color;
 }
 
-.filter__input-checkbox:checked + label::after {
+.filters__input-checkbox:checked+label::after {
   content: "";
   position: absolute;
   top: 7px;
@@ -130,17 +133,15 @@
   background-color: $accent-color;
 }
 
-.filter__input-checkbox:hover + label,
-.filter__input-checkbox:focus + label {
+.filters__input-checkbox:hover+label,
+.filters__input-checkbox:focus+label {
   color: $accent-color;
 }
 
-.filter__button {
+.filters__button {
   display: block;
-  width: 100%;
+  width: 86%;
   padding: 1.5em;
-  margin-top: 25px;
-  margin-bottom: 35px;
   font-weight: 500;
 
   &:last-child {
@@ -150,11 +151,14 @@
   &--submit {
     background-color: $accent-color;
     color: $basic-white;
+    margin-top: 86px;
+    margin-bottom: 35px;
   }
 
   &--reset {
     border: 1px solid $accent-color;
     color: $basic-black;
+
   }
 
   &:hover {

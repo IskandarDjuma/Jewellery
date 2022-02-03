@@ -26,9 +26,14 @@
     }
   }
 
-
   .swiper-pagination-bullet-active {
     color: $basic-black;
+  }
+
+  @include below ($mobile-width) {
+    &--inner {
+      justify-content: center;
+    }
   }
 }
 
@@ -71,10 +76,17 @@
 }
 
 .pagination__button {
+  border: none;
+  cursor: pointer;
+  background-color: $transparent;
   font-size: inherit;
   font-weight: 500;
 
   &:hover {
     color: $accent-color;
+  }
+
+  @include below ($mobile-width) {
+    display: none;
   }
 }

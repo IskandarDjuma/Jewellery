@@ -1,12 +1,17 @@
 .goods {
   display: flex;
-  margin-bottom: 130px;
+  margin-bottom: 90px;
   margin-top: 80px;
+
+  @include below ($tablet-width) {
+    margin-bottom: 64px;
+    margin-top: 53px;
+  }
 
   @include below ($mobile-width) {
     flex-direction: column;
     margin-top: 0;
-    margin-bottom: 70px;
+    margin-bottom: 45px;
   }
 }
 
@@ -16,12 +21,14 @@
 
   @include below ($tablet-width) {
     flex-direction: column;
-    margin-right: 40px;
+    margin-right: 0;
+    padding-right: 32px;
   }
 
   @include below ($mobile-width) {
     margin-right: 0;
-    margin-bottom: 50px;
+    margin-bottom: 6px;
+    padding-right: 0;
   }
 
 }
@@ -37,11 +44,11 @@
   @include below ($mobile-width) {
     display: none;
   }
-
 }
 
 .goods__preview-list {
   @include list-reset;
+
   li {
     padding-bottom: 30px;
   }
@@ -77,6 +84,8 @@
   }
 
   @include below ($tablet-width) {
+    padding-bottom: 12px;
+
     img {
       width: 319px;
       height: auto;
@@ -104,4 +113,3 @@
 .goods__photo-preview {
   @include button-reset;
 }
-

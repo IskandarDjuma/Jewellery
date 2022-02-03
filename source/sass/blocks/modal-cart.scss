@@ -10,12 +10,26 @@
     margin: 0;
     padding-bottom: 55px;
   }
+
+  @include below ($mobile-width) {
+    max-width: 290px;
+    padding: 45px 15px;
+
+    h2 {
+      font-size: 1.5em;
+      padding-bottom: 40px;
+    }
+  }
 }
 
 .modal-cart__product {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 60px;
+
+  @include below ($mobile-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .modal-cart__info {
@@ -29,6 +43,10 @@
 
   p {
     margin: 0;
+  }
+
+  @include below ($mobile-width) {
+    padding-left: 15px;
   }
 }
 
@@ -52,10 +70,21 @@
 
   p {
     @include font-size (0.87em, 1.5em, 400);
+    margin: 0;
   }
 
   .modal-cart__subtotal {
     font-weight: 500;
+  }
+
+  @include below ($mobile-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  p {
+    padding-bottom: 20px;
   }
 }
 
@@ -63,4 +92,8 @@
   display: flex;
   align-items: center;
   gap: 24px;
+
+  @include below ($mobile-width) {
+    flex-direction: column;
+  }
 }

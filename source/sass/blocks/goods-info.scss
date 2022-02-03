@@ -1,22 +1,38 @@
 .goods-info {
   flex: 1 1 auto;
+  padding-right: 102px;
+
   h3 {
     @include font-size (2.12em, 1.5em, 700);
     font-family: $secondary-text;
     margin: 0;
-    padding-bottom: 30px;
   }
 
   p {
     @include font-size (1.62em, 1.5em, 400);
     margin: 0;
-    padding-bottom: 50px;
+    padding-bottom: 32px;
+  }
+
+  @include below ($tablet-width) {
+    padding: 0;
+
+    h3 {
+      padding-bottom: 6px;
+    }
+  }
+
+  @include below ($mobile-width) {
+    p {
+      padding-bottom: 25px;
+    }
   }
 }
 
 .goods-info__list {
   @include list-reset;
   display: flex;
+  margin-bottom: 28px;
 
   li {
     padding-right: 35px;
@@ -37,12 +53,19 @@
 }
 
 .goods-info__content {
+  margin: 0;
+  margin-bottom: 50px;
+
   dt {
     @include font-size (0.87em, 1.5em, 500);
   }
 
   dd {
     @include font-size (0.87em, 1.5em, 400);
+  }
+
+  @include below ($mobile-width) {
+    margin-bottom: 37px;
   }
 }
 
@@ -51,8 +74,8 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid $basic-white100;
-  padding-bottom: 15px;
-  margin-bottom: 15px;
+  padding-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .goods-info__btn {
@@ -60,12 +83,12 @@
   font-weight: 500;
   font-family: inherit;
   width: 100%;
-  padding: 1.7em;
+  padding: 1.3em;
   background-color: $accent-color;
   color: $basic-white;
   border: none;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 17px;
 
   &:hover {
     background-color: darken($color: $accent-color, $amount: 10%);
@@ -83,10 +106,13 @@
   align-items: center;
   justify-content: space-between;
   color: $basic-grey;
-  text-align: center;
 
   li {
-    flex: 0 0 98px;
+    flex: 0 0 120px;
+
+    &:last-child {
+      text-align: end;
+    }
   }
 
   @include below ($tablet-width) {
@@ -97,7 +123,14 @@
     }
   }
 
+  @include below ($mobile-width) {
+    li {
+      flex: 0 0 65px;
+      text-align: center;
 
+      &:last-child {
+        text-align: center;
+      }
+    }
+  }
 }
-
-

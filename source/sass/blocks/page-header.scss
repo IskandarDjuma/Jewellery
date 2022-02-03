@@ -1,6 +1,6 @@
 .page-header {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
 
   &::before {
     content: "";
@@ -21,7 +21,6 @@
 
 .page-header__wrap {
   position: relative;
-
 }
 
 .page-header__wrapper {
@@ -30,12 +29,17 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 2em;
-  margin-bottom: 2em;
+  padding-top: 1em;
+  margin-bottom: 2.8em;
 
   @include below ($tablet-width) {
     position: relative;
     z-index: 1;
+    margin-bottom: 2.3em;
+  }
+
+  @include below ($mobile-width) {
+    margin-bottom: 0.3em;
   }
 }
 
@@ -45,7 +49,7 @@
   @include below ($tablet-width) {
     display: block;
     position: absolute;
-    top: 50px;
+    top: 56px;
     z-index: 2;
     width: 25px;
     height: 16px;
@@ -64,6 +68,10 @@
       transform: rotate(0deg);
       transition: .25s ease-in-out;
     }
+  }
+
+  @include below ($mobile-width) {
+    top: 40px;
   }
 }
 

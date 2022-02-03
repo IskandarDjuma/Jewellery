@@ -17,12 +17,20 @@
     font-family: $secondary-text;
     text-align: center;
     margin: 0;
+    padding-bottom: 20px;
+  }
+
+  @include below ($tablet-width) {
+    h2 {
+      padding-bottom: 15px;
+    }
   }
 }
 
 .products__link {
   text-align: center;
   margin: 0;
+  padding-bottom: 16px;
 
   a {
     color: $primary-text-color;
@@ -39,25 +47,37 @@
       opacity: 0.5;
     }
   }
+
+  @include below ($tablet-width) {
+    padding-bottom: 5px;
+  }
 }
 
 .products__list {
   @include list-reset;
   display: flex;
   padding: 44px 0 53px;
+
+  @include below ($tablet-width) {
+    padding-bottom: 45px;
+  }
+
+  @include below ($mobile-width) {
+    padding-bottom: 25px;
+  }
 }
 
 .products__item {
   flex: 0 0 auto;
   box-shadow: 0px 0px 0px $basic-grey;
-  transition:  box-shadow .6s ease-out;
+  transition: box-shadow .6s ease-out;
 
   p {
     font-weight: 500;
     color: $primary-text-color;
     text-align: center;
     margin: 0;
-    padding-top: 25px;
+    padding-top: 16px;
   }
 
   img {
@@ -69,8 +89,8 @@
 
   &:hover {
     box-shadow: 0px 0px 1px rgba(48, 49, 51, 0.05),
-                0px 16px 24px rgba(48, 49, 51, 0.1);
-    transition:  box-shadow .6s ease-in;
+      0px 16px 24px rgba(48, 49, 51, 0.1);
+    transition: box-shadow .6s ease-in;
   }
 
   @include below ($tablet-width) {
@@ -85,8 +105,13 @@
   }
 
   @include below ($mobile-width) {
+
     &:nth-child(2n) {
       margin-right: 0;
+    }
+
+    p {
+      padding-top: 5px;
     }
 
     img {
@@ -98,7 +123,7 @@
 .products__title span {
   @include font-size (0.87em, 1.5em, 700);
   display: block;
-  padding-top: 15px;
+  padding-top: 3px;
 }
 
 .products__button {
@@ -141,6 +166,7 @@
 .products__item--inner {
   @include below ($tablet-width) {
     img {
+      width: 206px;
       height: 208px;
     }
   }
@@ -152,4 +178,3 @@
     }
   }
 }
-

@@ -6,7 +6,7 @@
   }
 
   @include below ($mobile-width) {
-    margin-bottom: 70px;
+    margin-bottom: 76px;
   }
 }
 
@@ -16,7 +16,13 @@
     font-family: $secondary-text;
     text-align: center;
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+  }
+
+  @include below ($tablet-width) {
+    h2 {
+      margin-bottom: 16px;
+    }
   }
 }
 
@@ -40,14 +46,18 @@
       opacity: 0.5;
     }
   }
+
+  @include below ($mobile-width) {
+    margin-bottom: 44px;
+  }
 }
 
 .inst__list {
   @include list-reset;
   display: grid;
-  grid-template-columns:  auto max-content repeat(2, auto);
+  grid-template-columns: auto max-content repeat(2, auto);
   grid-template-rows: repeat(2, auto);
-   grid-column-gap: 27px;
+  grid-column-gap: 27px;
   grid-row-gap: 34px;
 
   @include below ($tablet-width) {
@@ -113,7 +123,6 @@
 
   @include below ($tablet-width) {
     width: 133px;
-    height: 133px;
     min-width: 100%;
     min-height: 100%;
   }

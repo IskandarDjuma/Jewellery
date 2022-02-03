@@ -12,24 +12,27 @@
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 220px;
+  padding-top: 5px;
 
   @include below ($mobile-width) {
     flex-wrap: nowrap;
     max-height: none;
+    padding-top: 0;
 
     :nth-child(4) {
-      margin-bottom: 50px;
+      margin-bottom: 20px;
     }
   }
 }
 
 .footer-nav__item {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   padding-right: 70px;
 
   &:last-child {
     padding-bottom: 0;
   }
+
   a {
     color: $basic-white;
     font-weight: 500;
@@ -37,5 +40,9 @@
     &:hover {
       color: $accent-color;
     }
+  }
+
+  @include below ($mobile-width) {
+    padding-bottom: 15px;
   }
 }

@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online jewelry store</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/CormorantGaramond-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/CormorantGaramond-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page-body">
@@ -34,7 +38,7 @@
         </div>
         <ul class="page-header__user-menu user-menu">
           <li class="user-menu__item user-menu__item--login">
-            <a href="#">Login</a>
+            <button class="user-menu__button" type="button">Login</button>
           </li>
           <li class="user-menu__item user-menu__item--cart">
             <a href="#">
@@ -84,36 +88,46 @@
             <li>
               <button class="goods__photo-preview" type="button">
                 <picture>
-                  <img src="img/gold-necklace-for-women@1x.jpg" srcset="img/gold-necklace-for-women@2x.jpg 2x" width="100"
+                  <!-- 1x: 100px; 2x: 200px -->
+                  <source type="image/webp"
+                    srcset="img/gold-necklace-for-women@1x.webp 1x, img/gold-necklace-for-women@2x.webp 2x">
+                  <img src="img/gold-necklace-for-women@1x.jpg" srcset="img/gold-necklace-for-women@2x.jpg 2x"
+                    width="100" height="125" alt="Image of necklaces on the model">
+                </picture>
+              </button>
+            </li>
+            <li>
+              <button class="goods__photo-preview" type="button">
+                <picture>
+                  <!-- 1x: 100px; 2x: 200px -->
+                  <source type="image/webp"
+                    srcset="img/pretty-gold-necklace@1x.webp 1x, img/pretty-gold-necklace@2x.webp 2x">
+                  <img src="img/pretty-gold-necklace@1x.jpg" srcset="img/pretty-gold-necklace@2x.jpg 2x" width="100"
                     height="125" alt="Image of necklaces on the model">
                 </picture>
               </button>
             </li>
             <li>
               <button class="goods__photo-preview" type="button">
-              <picture>
-                <img src="img/pretty-gold-necklace@1x.jpg" srcset="img/pretty-gold-necklace@2x.jpg 2x" width="100"
-                  height="125" alt="Image of necklaces on the model">
-              </picture>
-              </button>
-            </li>
-            <li>
-              <button class="goods__photo-preview" type="button">
-              <picture>
-                <img src="img/womens-necklace-set@1x.jpg" srcset="img/womens-necklace-set@2x.jpg 2x" width="100"
-                  height="125" alt="Image of necklaces on the model">
-              </picture>
+                <picture>
+                  <!-- 1x: 100px; 2x: 200px -->
+                  <source type="image/webp"
+                    srcset="img/womens-necklace-set@1x.webp 1x, img/womens-necklace-set@2x.webp 2x">
+                  <img src="img/womens-necklace-set@1x.jpg" srcset="img/womens-necklace-set@2x.jpg 2x" width="100"
+                    height="125" alt="Image of necklaces on the model">
+                </picture>
               </button>
             </li>
           </ul>
         </div>
         <div class="goods__review">
-            <picture>
-              <!-- 1x: 470px; 2x: 940px -->
-              <img  class="goods__review-full" src="img/necklace-detail-pc@1x.jpg" srcset="img/necklace-detail-pc@2x.jpg 2x"
-                alt="Image of a gold necklace with turquoise" width="470" height="435">
-            </picture>
-            <p>1 of 4</p>
+          <picture>
+            <!-- 1x: 470px; 2x: 940px -->
+            <source type="image/webp" srcset="img/necklace-detail-pc@1x.webp 1x, img/necklace-detail-pc@2x.webp 2x">
+            <img class="full-photo" src="img/necklace-detail-pc@1x.jpg" srcset="img/necklace-detail-pc@2x.jpg 2x"
+              alt="Image of a gold necklace with turquoise" width="470" height="435">
+          </picture>
+          <p>1 of 4</p>
         </div>
       </section>
 
@@ -158,6 +172,8 @@
           <li class="products__item swiper-slide">
             <a href="">
               <picture>
+                <!-- 1x: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="img/purple-necklace@1x.webp 1x, img/purple-necklace@2x.webp 2x">
                 <img src="img/purple-necklace@1x.jpg" srcset="img/purple-necklace@2x.jpg 2x" width="270" height="284"
                   alt="Image of a chain with stone amulet">
               </picture>
@@ -167,6 +183,9 @@
           <li class="products__item swiper-slide">
             <a href="#">
               <picture>
+                <!-- 1x: 270px; 2x: 540px -->
+                <source type="image/webp"
+                  srcset="img/layered-choker-necklace@1x.webp 1x, img/layered-choker-necklace@2x.webp 2x">
                 <img src="img/layered-choker-necklace@1x.jpg" srcset="img/layered-choker-necklace@2x.jpg 2x" width="270"
                   height="284" alt="Decoration on the neck with a leather strap">
               </picture>
@@ -176,6 +195,9 @@
           <li class="products__item swiper-slide">
             <a href="#">
               <picture>
+                <!-- 1x: 270px; 2x: 540px -->
+                <source type="image/webp"
+                  srcset="img/dainty-gold-necklace@1x.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
                 <img src="img/dainty-gold-necklace@1x.jpg" srcset="img/dainty-gold-necklace@2x.jpg" width="270"
                   height="284" alt="Triple Golden Chain">
               </picture>
@@ -185,6 +207,8 @@
           <li class="products__item swiper-slide">
             <a href="#">
               <picture>
+                <!-- 1x: 270px; 2x: 540px -->
+                <source type="image/webp" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings@2x.webp 2x">
                 <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" width="270" height="284"
                   alt="earrings with a galaxy-colored stone">
               </picture>
@@ -207,10 +231,14 @@
       <div class="news">
         <h3>The good stuff in your inbox</h3>
         <p>News and updates from CH. No spam, we promise.</p>
-        <form class="news__form" action="https://echo.htmlacademy.ru/courses" method="get">
+        <form class="news__form" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="mail"></label>
           <input type="text" placeholder="Your E-mail" id="mail" name="mail" required>
-          <button type="submit">Sign Up</button>
+          <button type="submit">Sign Up
+            <svg width="29" height="9">
+              <use href="/img/sprite-auto.svg#icon-next"></use>
+            </svg>
+          </button>
         </form>
       </div>
       <div class="footer-nav">
@@ -279,35 +307,41 @@
       </div>
     </div>
   </footer>
-  <section class="modal modal-cart">
+  <section class="modal modal-cart modal-overlay">
     <h2>The item was added to your cart</h2>
     <div class="modal-cart__product">
       <picture>
+        <!-- 1x: 84px; 2x: 168px -->
+        <source type="image/webp" srcset="img/necklace-detail-pc@1x.webp 1x, img/necklace-detail-pc@2x.webp 2x">
         <img src="img/necklace-detail-pc@1x.jpg" srcset="img/necklace-detail-pc@2x.jpg"
           alt="Image of a gold necklace with turquoise" width="84" height="79">
       </picture>
-      <h3>Gold Necklace </h3>
-      <p><span>$</span>115</p>
-    </div>
-    <div class="modal-cart__amount">
-      <button class="modal-cart__control" type="button">
-        <svg width="14" height="14">
-          <use xlink:href="img/sprite-auto.svg#icon-plus"></use>
-        </svg>
-      </button>
-      <span class="modal-cart__count-value">1</span>
-      <button class="modal-cart__control" type="button">
-        <svg width="14" height="2">
-          <use xlink:href="img/sprite-auto.svg#icon-minus"></use>
-        </svg>
-      </button>
+      <div class="modal-cart__info">
+        <h3>Gold Necklace </h3>
+        <p><span>$</span>115</p>
+      </div>
+      <div class="modal-cart__amount">
+        <button class="modal-cart__control" type="button">
+          <svg width="14" height="14">
+            <use xlink:href="img/sprite-auto.svg#icon-plus"></use>
+          </svg>
+        </button>
+        <span class="modal-cart__count-value">1</span>
+        <button class="modal-cart__control" type="button">
+          <svg width="14" height="2">
+            <use xlink:href="img/sprite-auto.svg#icon-minus"></use>
+          </svg>
+        </button>
+      </div>
     </div>
     <div class="modal-cart__item">
       <p>You have 1 item in the cart</p>
       <p class="modal-cart__subtotal">Cart subtotal: <span>$ 115</span></p>
     </div>
-    <button type="button" class="modal-cart__button modal-cart__button--shop ">Continue shopping</button>
-    <button type="button" class="modal-cart__button modal-cart__button--checkout ">Checkout</button>
+    <div class="modal-cart__buttons">
+      <button type="button" class="button button--secondary ">Continue shopping</button>
+      <button type="button" class="button button--primary ">Checkout</button>
+    </div>
     <button class="modal__close" type="button" aria-label="Закрыть"></button>
   </section>
 

@@ -1,8 +1,8 @@
 .container {
   min-width: 1024px;
-  max-width: 1210px;
+  max-width: 1366px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 98px;
 
   @include below($tablet-width) {
     min-width: 768px;

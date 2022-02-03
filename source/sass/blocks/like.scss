@@ -1,7 +1,11 @@
 .like {
-  margin-bottom: 130px;
+  margin-bottom: 123px;
+
+  @include below ($tablet-width) {
+    margin-bottom: 57px;
+  }
 
   @include below ($mobile-width) {
-    margin-bottom: 70px;
+    margin-bottom: 64px;
   }
 }
