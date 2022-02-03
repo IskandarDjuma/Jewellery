@@ -1,0 +1,60 @@
+.range__controls {
+  position: relative;
+  height: 41px;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.range__scale {
+  height: 2px;
+  background: $basic-white100;
+}
+
+.range__bar {
+  width: 50%;
+  height: 2px;
+  margin-left: 20%;
+  background: $accent-color;
+}
+
+
+.range__toggle {
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  background-color: $accent-color;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--min {
+    left: 53px;
+  }
+
+  &--max {
+    left: 159px;
+  }
+}
+
+.range__price-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 23px;
+
+  label {
+    font-weight: 500;
+  }
+
+  input {
+    font-family: inherit;
+    font-size: inherit;
+    width: 60px;
+    border: none;
+  }
+}
+

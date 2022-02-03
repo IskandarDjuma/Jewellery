@@ -1,0 +1,52 @@
+.hero-inner {
+  font-family: $secondary-text;
+  color: $basic-white;
+  position: relative;
+  z-index: -1;
+  background-color: $accent-color;
+  background-image: url("../img/intro-catalog-desktop@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 261px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 130px;
+
+  @include retina () {
+    background-image: url("../img/intro-catalog-desktop@2x.jpg");
+  }
+
+  @include below ($tablet-width) {
+    background-image: url("../img/intro-catalog-tab.jpg");
+    margin-bottom: 50px;
+
+    @include retina () {
+      background-image: url("../img/intro-catalog-tab@2x.jpg");
+    }
+  }
+
+  @include below ($mobile-width) {
+    background-image: url("../img/intro-catalog-mobile@1x.jpg");
+
+    @include retina () {
+      background-image: url("../img/intro-catalog-mobile@2x.jpg");
+    }
+  }
+
+  h3 {
+    @include font-size (2.12em, 1.5em, 700);
+    text-transform: uppercase;
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: center
+  }
+
+  p {
+    @include font-size (1.37em, 1.5em, 500);
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+  }
+}

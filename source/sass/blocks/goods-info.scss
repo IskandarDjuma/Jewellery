@@ -1,0 +1,103 @@
+.goods-info {
+  flex: 1 1 auto;
+  h3 {
+    @include font-size (2.12em, 1.5em, 700);
+    font-family: $secondary-text;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+
+  p {
+    @include font-size (1.62em, 1.5em, 400);
+    margin: 0;
+    padding-bottom: 50px;
+  }
+}
+
+.goods-info__list {
+  @include list-reset;
+  display: flex;
+
+  li {
+    padding-right: 35px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.goods-info__link {
+  color: $primary-text-color;
+  font-weight: 500;
+
+  &--current {
+    color: $basic-grey;
+  }
+}
+
+.goods-info__content {
+  dt {
+    @include font-size (0.87em, 1.5em, 500);
+  }
+
+  dd {
+    @include font-size (0.87em, 1.5em, 400);
+  }
+}
+
+.goods-info__stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $basic-white100;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.goods-info__btn {
+  font-size: inherit;
+  font-weight: 500;
+  font-family: inherit;
+  width: 100%;
+  padding: 1.7em;
+  background-color: $accent-color;
+  color: $basic-white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+
+  &:hover {
+    background-color: darken($color: $accent-color, $amount: 10%);
+  }
+
+  &:active {
+    background-color: lighten($color: $accent-color, $amount: 10%);
+  }
+}
+
+.goods-info__guarantees {
+  @include list-reset;
+  @include font-size (0.87em, 1.5em, 500);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $basic-grey;
+  text-align: center;
+
+  li {
+    flex: 0 0 98px;
+  }
+
+  @include below ($tablet-width) {
+    @include font-size (0.75em, 1.5em, 500);
+
+    li {
+      flex: 1 1 auto;
+    }
+  }
+
+
+}
+
+

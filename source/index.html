@@ -33,7 +33,7 @@
         </div>
         <ul class="page-header__user-menu user-menu">
           <li class="user-menu__item user-menu__item--login">
-            <a href="#">Login</a>
+            <button class="user-menu__button" type="button">login</button>
           </li>
           <li class="user-menu__item user-menu__item--cart">
             <a href="#">
@@ -278,7 +278,7 @@
           <input type="text" placeholder="Your E-mail" id="mail" name="mail" required>
           <button type="submit">Sign Up
             <svg width="29" height="9">
-              <use href="/img/sprite-auto.svg#icon-mail"></use>
+              <use href="/img/sprite-auto.svg#icon-next"></use>
             </svg>
           </button>
         </form>
@@ -349,21 +349,22 @@
       </div>
     </div>
   </footer>
-  <section class="modal modal-login">
+  <section class="modal modal-login modal-overlay">
     <picture>
       <!-- 1x: 430px; 2x: 860px -->
       <img src="img/intro-modal@1x.jpg" srcset="img/intro-modal@2x.jpg" alt="
         image of gold cufflinks" width="430" height="138">
     </picture>
-    <h2>Log In</h2>
-    <form class="modal__form form" action="https://echo.htmlacademy.ru" method="POST">
-      <ul class="form__list form__list--modal ">
+    <h2 class="visually-hidden">Log In form</h2>
+    <form class="modal__login-form form" action="https://echo.htmlacademy.ru" method="POST">
+      <h3>Log In</h3>
+      <ul class="form__list">
         <li class="form__item form__item--login">
-          <input type="email" name="login-login" id="login-login" required minlength="2" placeholder="Your E-mail">
+          <input type="email" name="login-login" data-login-input id="login-login" required minlength="2" placeholder="Your E-mail">
           <label class="visually-hidden" for="login-login"> Enter your email</label>
         </li>
         <li class="form__item form__item--password">
-          <input type="password" name="password" id="password" required minlength="10" maxlength="18"
+          <input type="password" name="password" data-pas-input id="password" required minlength="10" maxlength="18"
             placeholder="Password">
           <label class="visually-hidden" for="password">Введеите номер телефона</label>
         </li>
@@ -371,7 +372,7 @@
           <a href="#">Forgot your password?</a>
         </li>
         <li class="form__item">
-          <button class="form__button button" type="submit">Log In</button>
+          <button class="form__button button button--primary" type="submit">Log In</button>
         </li>
         <li class="form__item form__item--sign-up">
           <p>Don’t have an account?
@@ -383,8 +384,7 @@
     <button class="modal__close" type="button" aria-label="Закрыть"></button>
   </section>
   <script src="js/script.js" type="module"></script>
-  <script src="js/vendor.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </body>
 
 </html>

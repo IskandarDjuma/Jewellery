@@ -12,9 +12,15 @@
 
 .user-menu__item {
   flex: 1 1 auto;
-  a {
-    @include font-size(0.87, 1.5, 500);
+  a,
+  button {
+    @include font-size(0.87em, 1.5em, 500);
+    @include button-reset;
     color: $primary-text-color;
+
+    &:hover {
+      color: $accent-color;
+    }
   }
 
   svg {

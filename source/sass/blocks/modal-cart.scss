@@ -1,0 +1,66 @@
+.modal-cart {
+  background-color: $basic-white;
+  max-width: 500px;
+  padding: 55px 35px;
+
+  h2 {
+    @include font-size (1.62em, 1.5em, 700);
+    font-family: $secondary-text;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 55px;
+  }
+}
+
+.modal-cart__product {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.modal-cart__info {
+  padding-left: 20px;
+
+  h3 {
+    @include font-size (1.12em, 1.5em, 700);
+    font-family: $secondary-text;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.modal-cart__amount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: auto;
+
+  button {
+    @include button-reset;
+  }
+}
+
+.modal-cart__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  p {
+    @include font-size (0.87em, 1.5em, 400);
+  }
+
+  .modal-cart__subtotal {
+    font-weight: 500;
+  }
+}
+
+.modal-cart__buttons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}

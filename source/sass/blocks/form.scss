@@ -1,0 +1,72 @@
+.form {
+  padding-right: 45px;
+  padding-left: 45px;
+}
+
+.form__list {
+  @include list-reset;
+}
+
+.form__item {
+
+  input {
+    border: 0;
+    width: 100%;
+    padding-bottom: 13px;
+    background-color: $transparent;
+    border-bottom: 1px solid $primary-text-color;
+    outline: none;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    &::placeholder {
+      @include font-size (0.87em, 1.5em, 500);
+      font-family: $primary-text;
+    }
+  }
+
+  label {
+    color: $basic-grey;
+    padding-top: 5px;
+  }
+
+  &--login {
+    padding-bottom: 40px;
+  }
+}
+
+.form__item--restore {
+  text-align: right;
+  padding-bottom: 50px;
+
+  a {
+    @include font-size (0.75em, 1.5em, 500);
+    color: $basic-grey;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+.form__item--sign-up {
+  p {
+    @include font-size (0.87em, 1.5em, 500);
+    color: $basic-grey;
+    text-align: center;
+  }
+
+  a {
+    color: $primary-text-color;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+
+
+
+

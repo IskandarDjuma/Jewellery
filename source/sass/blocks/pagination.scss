@@ -4,6 +4,10 @@
   align-items: center;
   justify-content: center;
 
+  &--inner {
+    justify-content: space-between;
+  }
+
   .swiper-pagination-bullet {
     @include button-reset;
     font-weight: 500;
@@ -22,6 +26,7 @@
     }
   }
 
+
   .swiper-pagination-bullet-active {
     color: $basic-black;
   }
@@ -34,5 +39,42 @@
     span {
       margin: 0 10px 0 10px;
     }
+  }
+}
+
+.pagination__list {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination__item {
+  padding-right: 15px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  a {
+    color: $basic-grey;
+    font-weight: 500;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  &--current a  {
+    color: $primary-text-color;
+  }
+}
+
+.pagination__button {
+  font-size: inherit;
+  font-weight: 500;
+
+  &:hover {
+    color: $accent-color;
   }
 }

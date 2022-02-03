@@ -2,21 +2,39 @@
   @include button-reset;
 
   &--primary {
-    @include font-size (1.12em, 1.5em, 400);
-    font-family: $secondary-text;
-    background-color: $basic-black;
-    padding: 1em;
+    @include font-size (1em, 1.5em, 500);
+    background-color: $accent-color;
+    padding: 1.5em;
     color: $basic-white;
     width: 100%;
     align-items: center;
     justify-content: center;
 
     &:hover {
-      background-color: fade($basic-black, 10);
+      background-color: darken($color: $accent-color, $amount: 10%);
     }
 
-    &:focus {
-      color: rgba($basic-white, 0.3);
+    &:active {
+      background-color: lighten($color: $accent-color, $amount: 10%);
     }
+  }
+
+  &--secondary {
+    @include font-size (1em, 1.5em, 500);
+    padding: 1.5em;
+    color: $primary-text-color;
+    border: 1px solid $accent-color;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    background-color: $accent-color;
+    color: $basic-white;
+  }
+
+  &:active {
+    background-color: lighten($color: $accent-color, $amount: 10%);
   }
 }

@@ -1,0 +1,16 @@
+.catalog {
+  margin-bottom: 80px;
+}
+
+.catalog__list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.87rem;
+  margin-bottom: 80px;
+
+ @include below ($mobile-width) {
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+  }
+
+}

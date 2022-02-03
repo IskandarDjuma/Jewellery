@@ -1,0 +1,7 @@
+.like {
+  margin-bottom: 130px;
+
+  @include below ($mobile-width) {
+    margin-bottom: 70px;
+  }
+}
