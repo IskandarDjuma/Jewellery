@@ -16,8 +16,9 @@
     @include font-size (2.12em, 1.5em, 700);
     font-family: $secondary-text;
     text-align: center;
-    margin: 0;
     padding-bottom: 20px;
+    width: 70%;
+    margin: 0 auto;
   }
 
   @include below ($tablet-width) {
@@ -160,21 +161,5 @@
 
   @include below ($mobile-width) {
     display: none;
-  }
-}
-
-.products__item--inner {
-  @include below ($tablet-width) {
-    img {
-      width: 206px;
-      height: 208px;
-    }
-  }
-
-  @include below ($mobile-width) {
-    img {
-      min-height: 136px;
-      height: auto;
-    }
   }
 }

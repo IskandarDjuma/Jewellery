@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Detailed description and image of the product, selection of similar products">
+  <meta name="description" content="Jewelry store, gold and silver products, current prices and discounts">
   <title>Online jewelry store</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/CormorantGaramond-Medium.woff2" as="font" crossorigin="anonymous">
@@ -16,7 +16,7 @@
 <body class="page-body">
   <header class="page-header page-header--closed page-header--nojs">
     <div class="container page-header__wrap">
-      <button class="page-header__toggle" type="button" aria-label="open/close button">
+      <button class="page-header__toggle" type="button">
         <span></span>
         <span></span>
         <span></span>
@@ -31,7 +31,7 @@
             placeholder="Type here to search" autocomplete="off">
         </form>
         <div class="page-header__logo logo">
-          <a href="./main-page.html" aria-label="Company Logo">
+          <a href="#">
             <svg class="logo__icon" width="66" height="66">
               <use xlink:href="img/sprite-auto.svg#icon-logo"></use>
             </svg>
@@ -79,101 +79,24 @@
       </nav>
     </div>
   </header>
-  <main class="container">
-    <h1 class="visually-hidden">Jewelry product card</h1>
-    <div class="goods">
-      <section class="goods__photos">
-        <h2 class="visually-hidden">Image of goods</h2>
-        <div class="goods__preview">
-          <ul class="goods__preview-list">
-            <li>
-              <button class="goods__photo-preview" type="button">
-                <picture>
-                  <!-- 1x: 100px; 2x: 200px -->
-                  <source type="image/webp"
-                    srcset="img/gold-necklace-for-women@1x.webp 1x, img/gold-necklace-for-women@2x.webp 2x">
-                  <img src="img/gold-necklace-for-women@1x.jpg" srcset="img/gold-necklace-for-women@2x.jpg 2x"
-                    width="100" height="125" alt="Image of necklaces on the model">
-                </picture>
-              </button>
-            </li>
-            <li>
-              <button class="goods__photo-preview" type="button">
-                <picture>
-                  <!-- 1x: 100px; 2x: 200px -->
-                  <source type="image/webp"
-                    srcset="img/pretty-gold-necklace@1x.webp 1x, img/pretty-gold-necklace@2x.webp 2x">
-                  <img src="img/pretty-gold-necklace@1x.jpg" srcset="img/pretty-gold-necklace@2x.jpg 2x" width="100"
-                    height="125" alt="Image of necklaces on the model">
-                </picture>
-              </button>
-            </li>
-            <li>
-              <button class="goods__photo-preview" type="button">
-                <picture>
-                  <!-- 1x: 100px; 2x: 200px -->
-                  <source type="image/webp"
-                    srcset="img/womens-necklace-set@1x.webp 1x, img/womens-necklace-set@2x.webp 2x">
-                  <img src="img/womens-necklace-set@1x.jpg" srcset="img/womens-necklace-set@2x.jpg 2x" width="100"
-                    height="125" alt="Image of necklaces on the model">
-                </picture>
-              </button>
-            </li>
-          </ul>
-        </div>
-        <div class="goods__review">
-          <picture>
-            <!-- 1x: 470px; 2x: 940px -->
-            <source type="image/webp" srcset="img/necklace-detail-pc@1x.webp 1x, img/necklace-detail-pc@2x.webp 2x">
-            <img class="full-photo" src="img/necklace-detail-pc@1x.jpg" srcset="img/necklace-detail-pc@2x.jpg 2x"
-              alt="Image of a gold necklace with turquoise" width="470" height="435">
-          </picture>
-          <p>1 of 4</p>
-        </div>
-      </section>
-
-      <section class="goods-info">
-        <h2 class="visually-hidden">Product description</h2>
-        <h3>Gold Necklace </h3>
-        <p><span>$</span>115</p>
-        <ul class="goods-info__list">
-          <li><a class="goods-info__link goods-info__link--current" href="#">Description</a></li>
-          <li><a class="goods-info__link" href="#">Additional info</a></li>
-        </ul>
-        <dl class="goods-info__content">
-          <div class="goods-info__stats">
-            <dt>Metal type</dt>
-            <dd>Gold 585</dd>
-          </div>
-          <div class="goods-info__stats">
-            <dt>Stone</dt>
-            <dd>Turquoise</dd>
-          </div>
-          <div class="goods-info__stats">
-            <dt>Size</dt>
-            <dd>18” / 20”</dd>
-          </div>
-        </dl>
-        <button class="goods-info__btn" type="button">Add to cart</button>
-        <ul class="goods-info__guarantees">
-          <li>14 Day Returns</li>
-          <li>2-Year Warranty</li>
-          <li>Free Shipping</li>
-        </ul>
-      </section>
-    </div>
-
-    <section class="products like">
-      <div class="products__wrap swiper-container swiper-main">
-        <h2>You May Also Like</h2>
+  <main>
+    <h1 class="visually-hidden">Online jewelry store</h1>
+    <section class="hero">
+      <h2 class="visually-hidden">Main banner</h2>
+      <p class="hero__title">perfection</p>
+      <p class="hero__description">made to be yours</p>
+    </section>
+    <section class="products container">
+      <div class=" products__wrap swiper-container swiper-main">
+        <h2>New In</h2>
         <p class="products__link">
           <a href="catalog.html">Shop Now</a>
         </p>
         <ul class="products__list swiper-wrapper">
           <li class="products__item swiper-slide">
-            <a href="">
+            <a href="product.html">
               <picture>
-                <!-- 1x: 270px; 2x: 540px -->
+                <!-- 1x: 270 ; 2x: 540 -->
                 <source type="image/webp" srcset="img/purple-necklace@1x.webp 1x, img/purple-necklace@2x.webp 2x">
                 <img src="img/purple-necklace@1x.jpg" srcset="img/purple-necklace@2x.jpg 2x" width="270" height="284"
                   alt="Image of a chain with stone amulet">
@@ -182,9 +105,10 @@
             </a>
           </li>
           <li class="products__item swiper-slide">
-            <a href="#">
+            <a href="product.html">
               <picture>
-                <!-- 1x: 270px; 2x: 540px -->
+                <!-- 1x: 270 ; 2x: 540 -->
+                <!-- 1x: 270 ; 2x: 540 -->
                 <source type="image/webp"
                   srcset="img/layered-choker-necklace@1x.webp 1x, img/layered-choker-necklace@2x.webp 2x">
                 <img src="img/layered-choker-necklace@1x.jpg" srcset="img/layered-choker-necklace@2x.jpg 2x" width="270"
@@ -194,9 +118,10 @@
             </a>
           </li>
           <li class="products__item swiper-slide">
-            <a href="#">
+            <a href="product.html">
               <picture>
-                <!-- 1x: 270px; 2x: 540px -->
+                <!-- 1x: 270 ; 2x: 540 -->
+                <!-- 1x: 270 ; 2x: 540 -->
                 <source type="image/webp"
                   srcset="img/dainty-gold-necklace@1x.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
                 <img src="img/dainty-gold-necklace@1x.jpg" srcset="img/dainty-gold-necklace@2x.jpg" width="270"
@@ -206,9 +131,10 @@
             </a>
           </li>
           <li class="products__item swiper-slide">
-            <a href="#">
+            <a href="product.html">
               <picture>
-                <!-- 1x: 270px; 2x: 540px -->
+                <!-- 1x: 270 ; 2x: 540 -->
+                <!-- 1x: 270 ; 2x: 540 -->
                 <source type="image/webp" srcset="img/galaxy-earrings@1x.webp 1x, img/galaxy-earrings@2x.webp 2x">
                 <img src="img/galaxy-earrings@1x.jpg" srcset="img/galaxy-earrings@2x.jpg 2x" width="270" height="284"
                   alt="earrings with a galaxy-colored stone">
@@ -304,6 +230,162 @@
         <button class="products__button products__button--next swiper-button-next" type="button"></button>
       </div>
     </section>
+    <section class="blog">
+      <div class="container blog__wrap">
+        <h2>Blog</h2>
+        <p class="blog__link">
+          <a href="#">Read All</a>
+        </p>
+        <ul class="blog__list">
+          <li class="blog__item blog__item--small">
+            <picture>
+              <!-- 1x: 285 ; 2x: 570 -->
+              <source type="image/webp" srcset="img/blog-care-desktop@1x.webp 1x, img/blog-care-desktop@2x.webp 2x">
+              <img src="img/blog-care-desktop@1x.jpg" srcset="img/blog-care-desktop@2x.jpg"
+                alt="the image of jewelry laid out on the table" width="285" height="300">
+            </picture>
+            <div class="blog__text-block">
+              <time datetime="2019-09-30">September 30, 2019</time>
+              <h3 class="fade">How to care for your jewellery</h3>
+              <a href="#">Read Article</a>
+            </div>
+          </li>
+          <li class="blog__item blog__item--small blog__item--2">
+            <div class="blog__text-block">
+              <time datetime="2019-09-23">September 23, 2019</time>
+              <h3 class="fade">Power of crystals</h3>
+              <a href="#">Read Article</a>
+            </div>
+            <picture>
+              <!-- 1x: 285 ; 2x: 570 -->
+              <source type="image/webp" srcset="img/blog-power-desktop@1x.webp 1x, img/blog-power-desktop@2x.webp 2x">
+              <img src="img/blog-power-desktop@1x.jpg" srcset="img/blog-power-desktop@2x.jpg"
+                alt="ewelry in the form of petals with a gold tip" width="285" height="300">
+            </picture>
+          </li>
+          <li class="blog__item blog__item--big">
+            <picture>
+              <!-- 1x: 570 ; 2x: 1140 -->
+              <source type="image/webp" srcset="img/blog-trends-desktop@1x.webp 1x, img/blog-trends-desktop@2x.webp 2x">
+              <img src="img/blog-trends-desktop@1x.jpg" srcset="img/blog-trends-desktop@2x.jpg"
+                alt="the image of the girl's hands decorated with jewelry" width="570" height="630">
+            </picture>
+            <div class="blog__text-block">
+              <time datetime="2019-09-16">September 16, 2019</time>
+              <h3 class="fade"> AW 19 trends</h3>
+              <a href="#">Read Article</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="container faq__wrap">
+        <h2>Frequently asked questions</h2>
+        <ul class="faq__list accordion accordion--nojs">
+          <li class="faq__item accordion__item">
+            <button class="accordion__button faq__button" type="button">What materials are the jewellery made of?</button>
+            <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
+              contains precious and semiprecious stones and crystals.</p>
+          </li>
+          <li class="faq__item accordion__item">
+            <button class="accordion__button faq__button" type="button">Which countries do you deliver to?</button>
+            <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
+              contains precious and semiprecious stones and crystals.</p>
+          </li>
+          <li class="faq__item accordion__item">
+            <button class="accordion__button faq__button" type="button">What are the payment methods?</button>
+            <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
+              contains precious and semiprecious stones and crystals.</p>
+          </li>
+          <li class="faq__item accordion__item">
+            <button class="accordion__button faq__button" type="button">Can I return the jewellery if it didn’t fit me?</button>
+            <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
+              contains precious and semiprecious stones and crystals.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="inst">
+      <div class="container inst__wrap">
+        <h2>@Chjewellery</h2>
+        <p class="inst__link">
+          <a href="#">Follow Us</a>
+        </p>
+        <ul class="inst__list">
+          <li class="inst__item inst__item--1">
+            <a href="#">
+              <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="img/inst-1-desktop@1x.webp 1x, img/inst-1-desktop@2x.webp 2x">
+                <img src="img/inst-1-desktop@1x.jpg" srcset="img/inst-1-desktop@2x.jpg 2x" alt="square earrings"
+                  width="230" height="230">
+              </picture>
+            </a>
+          </li>
+          <li class="inst__item inst__item--2">
+            <a href="#">
+              <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="img/inst-2-desktop@1x.webp 1x, img/inst-2-desktop@2x.webp 2x">
+                <img src="img/inst-2-desktop@1x.jpg" srcset="img/inst-2-desktop@2x.jpg 2x"
+                  alt="earrings with three multicolored stones" width="230" height="150">
+              </picture>
+            </a>
+          </li>
+          <li class="inst__item inst__item--3">
+            <a href="#">
+              <picture>
+                <!-- 1x: 399 ; 2x: 798 -->
+                <source type="image/webp" srcset="img/inst-3-desktop@1x.webp 1x, img/inst-3-desktop@2x.webp 2x">
+                <img src="img/inst-3-desktop@1x.jpg" srcset="img/inst-3-desktop@2x.jpg 2x"
+                  alt="image of a model with earrings in the form of petals" width="399" height="412">
+              </picture>
+            </a>
+          </li>
+          <li class="inst__item inst__item--4">
+            <a href="#">
+              <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="img/inst-4-desktop@1x.webp 1x, img/inst-4-desktop@2x.webp 2x">
+                <img src="img/inst-4-desktop@1x.jpg" srcset="img/inst-4-desktop@2x.jpg 2x"
+                  alt="pearl stone necklace and earrings" width="230" height="230">
+              </picture>
+            </a>
+          </li>
+          <li class="inst__item inst__item--5">
+            <a href="#">
+              <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="img/inst-5-desktop@1x.webp 1x, img/inst-5-desktop@2x.webp 2x">
+                <img src="img/inst-5-desktop@1x.jpg" srcset="img/inst-5-desktop@2x.jpg 2x"
+                  alt="gold chains, earrings and bracelet" width="230" height="150">
+              </picture>
+            </a>
+          </li>
+          <li class="inst__item inst__item--6">
+            <a href="#">
+              <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="img/inst-6-desktop@1x.webp 1x, img/inst-6-desktop@2x.webp 2x">
+                <img src="img/inst-6-desktop@1x.jpg" srcset="img/inst-6-desktop@2x.jpg 2x" alt="braided earrings"
+                  width="230" height="230">
+              </picture>
+            </a>
+          </li>
+          <li class="inst__item inst__item--7">
+            <a href="#">
+              <picture>
+                <!-- 1x: 230 ; 2x: 460 -->
+                <source type="image/webp" srcset="img/inst-7-desktop@1x.webp 1x, img/inst-7-desktop@2x.webp 2x">
+                <img src="img/inst-7-desktop@1x.jpg" srcset="img/inst-7-desktop@2x.jpg 2x"
+                  alt="model's hands with different rings on their hands" width="230" height="150">
+              </picture>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
   <footer class="page-footer">
     <div class="container page-footer__wrap">
@@ -331,7 +413,7 @@
           <li class="footer-nav__item">
             <a href="#">Returns & Exchanges</a>
           </li>
-          <li class="footer-nav__item footer-nav__item--4">
+          <li class="footer-nav__item footer-nav__item--4 ">
             <a href="#">Delivery</a>
           </li>
           <li class="footer-nav__item">
@@ -386,44 +468,6 @@
       </div>
     </div>
   </footer>
-  <section class="modal modal-cart modal-overlay">
-    <h2>The item was added to your cart</h2>
-    <div class="modal-cart__product">
-      <picture>
-        <!-- 1x: 84px; 2x: 168px -->
-        <source type="image/webp" srcset="img/necklace-detail-pc@1x.webp 1x, img/necklace-detail-pc@2x.webp 2x">
-        <img src="img/necklace-detail-pc@1x.jpg" srcset="img/necklace-detail-pc@2x.jpg"
-          alt="Image of a gold necklace with turquoise" width="84" height="79">
-      </picture>
-      <div class="modal-cart__info">
-        <h3>Gold Necklace </h3>
-        <p><span>$</span>115</p>
-      </div>
-      <div class="modal-cart__amount">
-        <button class="modal-cart__control" type="button">
-          <svg width="14" height="14">
-            <use xlink:href="img/sprite-auto.svg#icon-plus"></use>
-          </svg>
-        </button>
-        <span class="modal-cart__count-value">1</span>
-        <button class="modal-cart__control" type="button">
-          <svg width="14" height="2">
-            <use xlink:href="img/sprite-auto.svg#icon-minus"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div class="modal-cart__item">
-      <p>You have 1 item in the cart</p>
-      <p class="modal-cart__subtotal">Cart subtotal: <span>$ 115</span></p>
-    </div>
-    <div class="modal-cart__buttons">
-      <button type="button" class="button button--secondary ">Continue shopping</button>
-      <button type="button" class="button button--primary ">Checkout</button>
-    </div>
-    <button class="modal__close" type="button" aria-label="Закрыть"></button>
-  </section>
-
   <section class="modal modal-login modal-overlay">
     <picture>
       <!-- 1x: 430px; 2x: 860px -->
@@ -460,8 +504,8 @@
     </form>
     <button class="modal__close" type="button" aria-label="close"></button>
   </section>
-
   <script src="js/main.js" type="module"></script>
+
 </body>
 
 </html>

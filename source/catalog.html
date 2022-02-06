@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Selection of jewelry, necklaces, earrings, rings, bracelets from different manufacturers">
   <title>Online jewelry store</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/CormorantGaramond-Medium.woff2" as="font" crossorigin="anonymous">
@@ -30,7 +31,7 @@
             placeholder="Type here to search" autocomplete="off">
         </form>
         <div class="page-header__logo logo">
-          <a href="index.html">
+          <a href="main-page.html">
             <svg class="logo__icon" width="66" height="66">
               <use xlink:href="img/sprite-auto.svg#icon-logo"></use>
             </svg>
@@ -38,7 +39,7 @@
         </div>
         <ul class="page-header__user-menu user-menu">
           <li class="user-menu__item user-menu__item--login">
-            <button class="user-menu__button" type="button">Login</button>
+            <a class="user-menu__button" href="#">Login</a>
           </li>
           <li class="user-menu__item user-menu__item--cart">
             <a href="#">
@@ -170,11 +171,11 @@
           <button type="reset" class="filters__button filters__button--reset button">Clear All</button>
         </form>
       </section>
-      <section class="catalog">
+      <section class="catalog products">
         <div class="catalog__wrap">
           <h2 class="visually-hidden">search results</h2>
-          <ul class="products__list catalog__list">
-            <li class="products__item products__item--inner">
+          <ul class="products__list catalog__list products-inner">
+            <li class="products__item products-inner__item">
               <a href="product.html">
                 <picture>
                   <!-- 1x: 270px; 2x: 540px -->
@@ -186,7 +187,7 @@
                 <p class="products__title">Double pearl earrings<span>$115</span></p>
               </a>
             </li>
-            <li class="products__item products__item--inner">
+            <li class="products__item products-inner__item">
               <a href="product.html">
                 <picture>
                   <!-- 1x: 270px; 2x: 540px -->
@@ -197,7 +198,7 @@
                 <p class="products__title">Choker with gold bead<span>$55</span></p>
               </a>
             </li>
-            <li class="products__item products__item--inner">
+            <li class="products__item products-inner__item">
               <a href="product.html">
                 <picture>
                   <!-- 1x: 270px; 2x: 540px -->
@@ -208,7 +209,7 @@
                 <p class="products__title">Gold layered necklace<span>$155</span></p>
               </a>
             </li>
-            <li class="products__item products__item--inner">
+            <li class="products__item products-inner__item">
               <a href="product.html">
                 <picture>
                   <!-- 1x: 270px; 2x: 540px -->
@@ -220,7 +221,7 @@
                 <p class="products__title">Blue gemstone pendant<span>$105</span></p>
               </a>
             </li>
-            <li class="products__item products__item--inner">
+            <li class="products__item products-inner__item">
               <a href="product.html">
                 <picture>
                   <!-- 1x: 270px; 2x: 540px -->
@@ -231,7 +232,7 @@
                 <p class="products__title">Boho earrings<span>$75</span></p>
               </a>
             </li>
-            <li class="products__item products__item--inner">
+            <li class="products__item products-inner__item">
               <a href="product.html">
                 <picture>
                   <!-- 1x: 270px; 2x: 540px -->
@@ -242,7 +243,7 @@
                 <p class="products__title">Gold bird necklace<span>$135</span></p>
               </a>
             </li>
-            <li class="products__item products__item--inner">
+            <li class="products__item products-inner__item">
               <a href="product.html">
                 <picture>
                   <!-- 1x: 270px; 2x: 540px -->
@@ -253,7 +254,7 @@
                 <p class="products__title">Black leather choker<span>$85</span></p>
               </a>
             </li>
-            <li class="products__item products__item--inner">
+            <li class="products__item products-inner__item">
               <a href="product.html">
                 <picture>
                   <!-- 1x: 270px; 2x: 540px -->
@@ -264,7 +265,7 @@
                 <p class="products__title">Necklace with amethyst<span>$145</span></p>
               </a>
             </li>
-            <li class="products__item products__item--inner">
+            <li class="products__item products-inner__item">
               <a href="product.html">
                 <picture>
                   <!-- 1x: 270px; 2x: 540px -->
@@ -275,7 +276,7 @@
                 <p class="products__title">Elephant earrings<span>$95</span></p>
               </a>
             </li>
-            <li class="products__item products__item--inner">
+            <li class="products__item products-inner__item">
               <a href="product.html">
                 <picture>
                   <!-- 1x: 270px; 2x: 540px -->
@@ -286,7 +287,7 @@
                 <p class="products__title">Threader necklace<span>$115</span></p>
               </a>
             </li>
-            <li class="products__item products__item--inner">
+            <li class="products__item products-inner__item">
               <a href="product.html">
                 <picture>
                   <!-- 1x: 270px; 2x: 540px -->
@@ -297,7 +298,7 @@
                 <p class="products__title">Origami crane necklace<span>$105</span></p>
               </a>
             </li>
-            <li class="products__item products__item--inner">
+            <li class="products__item products-inner__item">
               <a href="product.html">
                 <picture>
                   <!-- 1x: 270px; 2x: 540px -->
@@ -331,7 +332,7 @@
         <p>News and updates from CH. No spam, we promise.</p>
         <form class="news__form" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="mail"></label>
-          <input type="text" placeholder="Your E-mail" id="mail" name="mail" required>
+          <input type="email" placeholder="Your E-mail" id="mail" name="mail" required>
           <button type="submit">Sign Up
             <svg width="29" height="9">
               <use href="/img/sprite-auto.svg#icon-next"></use>
@@ -350,7 +351,7 @@
           <li class="footer-nav__item">
             <a href="#">Returns & Exchanges</a>
           </li>
-          <li class="footer-nav__item">
+          <li class="footer-nav__item footer-nav__item--4">
             <a href="#">Delivery</a>
           </li>
           <li class="footer-nav__item">
@@ -370,7 +371,7 @@
       <div class="social">
         <ul class="social__list">
           <li class="social__item">
-            <a href="">
+            <a href="#">
               <svg width="8" height="15">
                 <use xlink:href="img/sprite-auto.svg#icon-fb"></use>
               </svg>
@@ -378,7 +379,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a href="">
+            <a href="#">
               <svg width="15" height="15">
                 <use xlink:href="img/sprite-auto.svg#icon-inst"></use>
               </svg>
@@ -386,7 +387,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a href="">
+            <a href="#">
               <svg width="16" height="15">
                 <use xlink:href="img/sprite-auto.svg#icon-pinterest"></use>
               </svg>
@@ -394,7 +395,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a href="">
+            <a href="#">
               <svg width="15" height="13">
                 <use xlink:href="img/sprite-auto.svg#icon-twitter"></use>
               </svg>
@@ -405,7 +406,43 @@
       </div>
     </div>
   </footer>
-  <script src="js/script.js" type="module"></script>
+  <section class="modal modal-login modal-overlay">
+    <picture>
+      <!-- 1x: 430px; 2x: 860px -->
+      <source type="image/webp" srcset="img/intro-modal@1x.webp 1x, img/intro-modal@2x.webp 2x">
+      <img src="img/intro-modal@1x.jpg" srcset="img/intro-modal@2x.jpg" alt="
+        image of gold cufflinks" width="430" height="138">
+    </picture>
+    <h2 class="visually-hidden">Log In form</h2>
+    <form class="modal__login-form form" action="https://echo.htmlacademy.ru" method="POST">
+      <h3>Log In</h3>
+      <ul class="form__list">
+        <li class="form__item form__item--login">
+          <input type="email" name="login-login" data-login-input id="login-login" required minlength="2"
+            placeholder="Your E-mail">
+          <label class="visually-hidden" for="login-login"> Enter your email</label>
+        </li>
+        <li class="form__item form__item--password">
+          <input type="password" name="password" data-pas-input id="password" required minlength="10" maxlength="18"
+            placeholder="Password">
+          <label class="visually-hidden" for="password">Введеите номер телефона</label>
+        </li>
+        <li class="form__item form__item--restore">
+          <a href="#">Forgot your password?</a>
+        </li>
+        <li class="form__item">
+          <button class="form__button button button--primary" type="submit">Log In</button>
+        </li>
+        <li class="form__item form__item--sign-up">
+          <p>Don’t have an account?
+            <a href="#">Sign up</a>
+          </p>
+        </li>
+      </ul>
+    </form>
+    <button class="modal__close" type="button" aria-label="close"></button>
+  </section>
+  <script src="js/main.js" type="module"></script>
 </body>
 
 </html>

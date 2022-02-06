@@ -1,0 +1,15 @@
+.products-inner__item {
+  @include below ($tablet-width) {
+    img {
+      width: 206px;
+      height: 208px;
+    }
+  }
+
+  @include below ($mobile-width) {
+    img {
+      min-height: 136px;
+      height: auto;
+    }
+  }
+}

@@ -11,10 +11,14 @@
 }
 
 .user-menu__item {
-  a,
-  button {
+  padding-right: 10px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  a {
     @include font-size(0.87em, 1.5em, 500);
-    @include button-reset;
     color: $primary-text-color;
 
     &:hover {
@@ -39,6 +43,7 @@
         display: inline-block        ;
         color: $basic-black;
         fill: $basic-white;
+        vertical-align: bottom;
       }
 
       a {

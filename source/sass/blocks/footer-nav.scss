@@ -1,5 +1,6 @@
 .footer-nav {
   flex: 1 1 380px;
+  margin-right: 80px;
 
   @include below ($mobile-width) {
     width: 100%;
@@ -13,13 +14,14 @@
   flex-wrap: wrap;
   max-height: 220px;
   padding-top: 5px;
+  overflow-x: scroll;
 
   @include below ($mobile-width) {
     flex-wrap: nowrap;
     max-height: none;
     padding-top: 0;
 
-    :nth-child(4) {
+    .footer-nav__item--4 {
       margin-bottom: 20px;
     }
   }
@@ -27,7 +29,6 @@
 
 .footer-nav__item {
   padding-bottom: 20px;
-  padding-right: 70px;
 
   &:last-child {
     padding-bottom: 0;

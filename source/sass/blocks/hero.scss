@@ -4,7 +4,7 @@
   position: relative;
   z-index: -1;
   background-color: $accent-color;
-  background-image: url("../img/intro-desktop@1x.jpg");
+  background-image: url("../img/intro-desktop@1x.webp");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 463px;
@@ -15,7 +15,7 @@
   margin-bottom: 117px;
 
   @include retina () {
-    background-image: url("../img/intro-desktop@2x.jpg");
+    background-image: url("../img/intro-desktop@2x.webp");
   }
 
   p {
@@ -24,19 +24,19 @@
 
   @include below ($tablet-width) {
     margin-bottom: 65px;
-    background-image: url("../img/intro-tablet.jpg");
+    background-image: url("../img/intro-tablet.webp");
 
     @include retina () {
-      background-image: url("../img/intro-tablet@2x.jpg");
+      background-image: url("../img/intro-tablet@2x.webp");
     }
   }
 
   @include below ($mobile-width) {
     margin-bottom: 53px;
-    background-image: url("../img/intro-main-mobile@1x.jpg");
+    background-image: url("../img/intro-main-mobile@1x.webp");
 
     @include retina () {
-      background-image: url("../img/intro-main-mobile@2x.jpg");
+      background-image: url("../img/intro-main-mobile@2x.webp");
     }
   }
 }

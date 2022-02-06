@@ -23,7 +23,7 @@ import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
 
   // Swiper
 
-  const swiper = new Swiper('.swiper-container', {
+  const swiper = new Swiper('.swiper-main', {
     slidesPerView: 2,
     spaceBetween: 30,
     slidesPerGroup: 2,
@@ -66,57 +66,7 @@ import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
       },
     },
   });
-})();
 
-
-/* Swiper catalog */
-
-(function () {
-  /* eslint-disable no-unused-consts */
-  // eslint-disable-next-line no-undef
-  const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 2,
-    spaceBetween: 30,
-    slidesPerGroup: 2,
-    loop: true,
-    pagination: {
-      el: '.pagination',
-      clickable: true,
-      type: 'fraction',
-      renderFraction: function (currentClass, totalClass) {
-        return `<span class="${currentClass}"></span>of
-                <span class="${totalClass}"></span>`;
-      },
-    },
-    navigation: {
-      nextEl: '.products__button--next',
-      prevEl: '.products__button--prev',
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        pagination: {
-          el: '.products__pagination',
-          type: 'bullets',
-          renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
-          },
-        },
-      },
-      1024: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        pagination: {
-          el: '.products__pagination',
-          type: 'bullets',
-          renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
-          },
-        },
-      },
-    },
-  });
 
   // accordion
 
@@ -267,7 +217,7 @@ import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
 
   const cartLink = document.querySelector(".goods-info__btn");
   const popupCart = document.querySelector(".modal-cart");
-  const cartClose = popupCart.querySelector(".modal__close");
+  const cartClose = document.querySelector(".modal__close");
 
   if (cartLink) {
     cartLink.addEventListener("click", function (evt) {
