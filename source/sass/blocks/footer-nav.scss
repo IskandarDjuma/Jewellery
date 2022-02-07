@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   max-height: 220px;
   padding-top: 5px;
-  overflow-x: scroll;
+  overflow-x: auto;
 
   @include below ($mobile-width) {
     flex-wrap: nowrap;
@@ -29,6 +29,7 @@
 
 .footer-nav__item {
   padding-bottom: 20px;
+  padding-right: 10px;
 
   &:last-child {
     padding-bottom: 0;
