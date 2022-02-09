@@ -26,6 +26,12 @@
       padding-bottom: 15px;
     }
   }
+
+  @include below ($mobile-width) {
+    h2 {
+      width: 100%;
+    }
+  }
 }
 
 .products__link {
@@ -103,6 +109,10 @@
       width: 324px;
       height: 340px;
     }
+
+    p {
+      padding-top: 24px;
+    }
   }
 
   @include below ($mobile-width) {
@@ -112,7 +122,7 @@
     }
 
     p {
-      padding-top: 5px;
+      padding-top: 10px;
     }
 
     img {
@@ -143,7 +153,6 @@
 
   &--prev {
     background-image: url("../img/arrow-prev.svg");
-
   }
 
   &--next {
@@ -157,6 +166,12 @@
 
   &:focus {
     transform: scale(1.2);
+  }
+
+  @include below ($tablet-width) {
+    &--next {
+      right: 0;
+    }
   }
 
   @include below ($mobile-width) {

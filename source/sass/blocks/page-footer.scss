@@ -5,6 +5,10 @@
   @include below ($tablet-width) {
     padding: 45px 0;
   }
+
+  @include below ($mobile-width) {
+    padding: 45px 0;
+  }
 }
 
 .page-footer__wrap {
@@ -13,7 +17,7 @@
 
   @include below ($tablet-width) {
     gap: 45px 0;
-    padding-right: 160px;
+    padding-right: 145px;
   }
 
   @include below ($mobile-width) {

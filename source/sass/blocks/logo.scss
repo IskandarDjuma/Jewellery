@@ -4,9 +4,27 @@
   svg {
     color: $accent-color;
     transition: ease-in 0.2s;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-89%);
 
     &:hover {
       color: rgba($color: $accent-color, $alpha: 0.5);
+    }
+  }
+
+  @include below ($tablet-width) {
+    svg {
+      top: 40%;
+      transform: translateX(-26%);
+    }
+  }
+
+  @include below ($mobile-width) {
+    svg {
+      top: 20%;
+      transform: scale(0.8);
+      left: 39%;
     }
   }
 }

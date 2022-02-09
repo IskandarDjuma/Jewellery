@@ -6,6 +6,10 @@
       display: block;
     }
   }
+
+  @include below ($mobile-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .filters--closed .filters__form {
@@ -108,9 +112,9 @@
   @include font-size (1em, 1.5em, 500);
   width: 100%;
   font-weight: 500;
-  margin-top: 25px;
+  margin-top: 23px;
   margin-bottom: 17px;
-  padding-left: 25px;
+  padding-left: 24px;
 }
 
 .filters__input-checkbox+label::before {
@@ -151,7 +155,7 @@
   &--submit {
     background-color: $accent-color;
     color: $basic-white;
-    margin-top: 86px;
+    margin-top: 36px;
     margin-bottom: 35px;
   }
 
@@ -172,5 +176,14 @@
   @include below ($tablet-width) {
     width: 362px;
     margin-left: 20px;
+  }
+}
+
+// PXP -open
+
+.filters__product {
+  .filters__list--product,
+  .filters__list--price {
+    display: block;
   }
 }

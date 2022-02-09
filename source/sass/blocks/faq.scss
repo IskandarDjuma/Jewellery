@@ -2,11 +2,11 @@
   margin-bottom: 110px;
 
   @include below ($tablet-width) {
-    margin-bottom: 93px;
+    margin-bottom: 75px;
   }
 
   @include below ($mobile-width) {
-    margin-bottom: 44px;
+    margin-bottom: 57px;
   }
 }
 
@@ -43,13 +43,14 @@
 
   @include below ($mobile-width) {
     h2 {
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
 
     button {
       font-size: inherit;
       text-align: left;
       padding-bottom: 5px;
+      width: auto;
     }
   }
 }
@@ -68,12 +69,12 @@
   padding: 42px 42px 38px;
 
   p {
-    width: 50%;
+    width: 58%;
     margin: 0;
   }
 
   @include below ($tablet-width) {
-    padding: 41px 50px 20px;
+    padding: 41px 50px 40px;
 
     p {
       width: 98%;
@@ -81,16 +82,29 @@
   }
 
   @include below ($mobile-width) {
-    padding: 15px 25px;
+    padding: 13px 25px;
 
     p {
       font-size: 0.87em;
+      width: 85%;
     }
   }
 }
 
-.faq__button {
-  @include below ($tablet-width) {
-    padding-bottom: 20px;
+.faq__item--open {
+  .faq__content {
+    display: block;
+  }
+
+  .faq__button {
+    @include below ($tablet-width) {
+      padding-bottom: 20px;
+    }
+  }
+
+  .faq__button {
+    @include below ($mobile-width) {
+      padding-bottom: 10px;
+    }
   }
 }

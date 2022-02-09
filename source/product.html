@@ -79,9 +79,9 @@
       </nav>
     </div>
   </header>
-  <main class="container page-main">
+  <main>
     <h1 class="visually-hidden">Jewelry product card</h1>
-    <div class="goods">
+    <div class="goods container">
       <section class="goods__photos">
         <h2 class="visually-hidden">Image of goods</h2>
         <div class="goods__preview">
@@ -122,13 +122,15 @@
           </ul>
         </div>
         <div class="goods__review">
-          <picture>
-            <!-- 1x: 470px; 2x: 940px -->
-            <source type="image/webp" srcset="img/necklace-detail-pc@1x.webp 1x, img/necklace-detail-pc@2x.webp 2x">
-            <img class="full-photo" src="img/necklace-detail-pc@1x.jpg" srcset="img/necklace-detail-pc@2x.jpg 2x"
-              alt="Image of a gold necklace with turquoise" width="470" height="435">
-          </picture>
-          <p>1 of 4</p>
+          <figure>
+            <picture>
+              <!-- 1x: 470px; 2x: 940px -->
+              <source type="image/webp" srcset="img/necklace-detail-pc@1x.webp 1x, img/necklace-detail-pc@2x.webp 2x">
+              <img class="full-photo" src="img/necklace-detail-pc@1x.jpg" srcset="img/necklace-detail-pc@2x.jpg 2x"
+                alt="Image of a gold necklace with turquoise" width="470" height="435">
+            </picture>
+            <figcaption>1 of 4</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -163,7 +165,7 @@
       </section>
     </div>
 
-    <section class="products like">
+    <section class="products like container">
       <div class="products__wrap swiper-container swiper-main">
         <h2>You May Also Like</h2>
         <p class="products__link">

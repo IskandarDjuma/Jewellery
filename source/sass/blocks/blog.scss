@@ -2,7 +2,7 @@
   padding: 110px 0;
 
   @include below ($tablet-width) {
-    padding-top: 45px;
+    padding-top: 58px;
     padding-bottom: 65px;
   }
 
@@ -54,11 +54,12 @@
   @include below ($tablet-width) {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 40px 0;
+    gap: 50px 0;
   }
 
   @include below ($mobile-width) {
     padding-top: 55px;
+    gap: 42px 0;
   }
 }
 

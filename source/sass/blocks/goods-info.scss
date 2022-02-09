@@ -1,6 +1,6 @@
 .goods-info {
   flex: 1 1 auto;
-  padding-right: 102px;
+  margin-right: 102px;
 
   h3 {
     @include font-size (2.12em, 1.5em, 700);
@@ -11,20 +11,24 @@
   p {
     @include font-size (1.62em, 1.5em, 400);
     margin: 0;
-    padding-bottom: 32px;
+    padding-bottom: 40px;
   }
 
   @include below ($tablet-width) {
-    padding: 0;
+    margin-right: 0;
 
     h3 {
       padding-bottom: 6px;
+    }
+
+    p {
+      padding-bottom: 34px;
     }
   }
 
   @include below ($mobile-width) {
     p {
-      padding-bottom: 25px;
+      padding-bottom: 23px;
     }
   }
 }
@@ -96,6 +100,10 @@
 
   &:active {
     background-color: lighten($color: $accent-color, $amount: 10%);
+  }
+
+  @include below ($tablet-width) {
+    margin-bottom: 12px;
   }
 }
 

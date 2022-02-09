@@ -40,10 +40,10 @@
 
     &--cart {
       svg {
-        display: inline-block        ;
+        display: inline-block;
         color: $basic-black;
         fill: $basic-white;
-        vertical-align: bottom;
+        vertical-align: text-top;
       }
 
       a {

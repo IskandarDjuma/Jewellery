@@ -2,7 +2,7 @@
   margin-bottom: 123px;
 
   @include below ($tablet-width) {
-    margin-bottom: 57px;
+    margin-bottom: 70px;
   }
 
   @include below ($mobile-width) {

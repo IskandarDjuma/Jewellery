@@ -90,9 +90,9 @@
         <button class="filters__toggler" type="button">Filter</button>
         <h2 class="visually-hidden">Product filters</h2>
         <form class="filters__form accordion accordion--nojs" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="accordion__item">
+          <fieldset class="accordion__item filters__product">
             <button class="accordion__button filters__toggle" type="button">Product</button>
-            <ul class="accordion__content filters__list">
+            <ul class="accordion__content filters__list filters__list--product">
               <li class="filters__option filters__checkbox">
                 <input class="visually-hidden filters__input-checkbox filters__input" type="checkbox" name="necklaces" id="necklaces" checked="">
                 <label for="necklaces">Necklaces</label>
@@ -137,9 +137,9 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="accordion__item">
+          <fieldset class="accordion__item filters__product">
             <button class="accordion__button filters__toggle" type="button">Price</button>
-            <div class="filters__list range accordion__content">
+            <div class="filters__list filters__list--price range accordion__content">
               <div class="range__controls">
                 <div class="range__scale">
                   <div class="range__bar"></div>

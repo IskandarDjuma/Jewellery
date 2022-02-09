@@ -1,5 +1,5 @@
 .catalog {
-  margin-bottom: 80px;
+  margin-bottom: 73px;
 
   @include below ($mobile-width) {
     margin-bottom: 65px;
@@ -13,8 +13,13 @@
   grid-gap: 1.87rem;
   margin-bottom: 80px;
 
+  @include below ($tablet-width) {
+    margin-bottom: 58px;
+  }
+
   @include below ($mobile-width) {
     grid-template-columns: repeat(2, minmax(130px, 1fr));
-    margin-bottom: 24px;
+    margin-bottom: 35px;
+    grid-gap: 23px;
   }
 }

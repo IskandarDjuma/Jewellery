@@ -32,7 +32,7 @@
   }
 
   @include below ($mobile-width) {
-    margin-bottom: 53px;
+    margin-bottom: 57px;
     background-image: url("../img/intro-main-mobile@1x.webp");
 
     @include retina () {

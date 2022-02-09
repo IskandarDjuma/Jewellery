@@ -1,23 +1,24 @@
 .goods {
   display: flex;
-  margin-bottom: 90px;
-  margin-top: 80px;
+  margin-bottom: 83px;
+  margin-top: 65px;
 
   @include below ($tablet-width) {
-    margin-bottom: 64px;
-    margin-top: 53px;
+    margin-bottom: 68px;
+    margin-top: 17px;
   }
 
   @include below ($mobile-width) {
     flex-direction: column;
     margin-top: 0;
-    margin-bottom: 45px;
+    margin-bottom: 52px;
   }
 }
 
 .goods__photos {
   display: flex;
   margin-right: 100px;
+  padding-top: 15px;
 
   @include below ($tablet-width) {
     flex-direction: column;
@@ -27,8 +28,9 @@
 
   @include below ($mobile-width) {
     margin-right: 0;
-    margin-bottom: 6px;
+    margin-bottom: 26px;
     padding-right: 0;
+    padding-top: 0;
   }
 }
 
@@ -73,7 +75,12 @@
 .goods__review {
   position: relative;
 
-  p {
+  figure {
+    position: relative;
+    margin: 0;
+  }
+
+  figcaption {
     display: none;
   }
 
@@ -83,23 +90,28 @@
   }
 
   @include below ($tablet-width) {
-    padding-bottom: 12px;
+    padding-bottom: 10px;
 
     img {
       width: 319px;
-      height: auto;
+      height: 284px;
     }
   }
 
   @include below ($mobile-width) {
+    padding-bottom: 2px;
+
     img {
-      width: auto;
+      width: 100%;
+      height: auto;
+      min-height: 260px;
+      object-fit: cover;
     }
 
-    p {
+    figcaption {
       display: block;
       position: absolute;
-      bottom: 0;
+      bottom: 12px;
       left: 50%;
       transform: translateX(-50%);
       color: $primary-text-color;

@@ -28,7 +28,7 @@
   }
 
   @include below ($mobile-width) {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
     background-image: url("../img/intro-catalog-mobile@1x.jpg");
 
     @include retina () {
