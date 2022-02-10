@@ -31,13 +31,13 @@
   }
 
   &--login {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
   }
 }
 
 .form__item--restore {
   text-align: right;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 
   a {
     @include font-size (0.75em, 1.5em, 500);

@@ -10,7 +10,7 @@
     color: $basic-white;
     margin: 0;
     padding-bottom: 5px;
-    letter-spacing: 0.03em
+    letter-spacing: 0.02em
   }
 
   p {
@@ -27,6 +27,11 @@
 
   @include below ($mobile-width) {
     margin-right: 0;
+
+    h3 {
+      line-height: 1.3em;
+      padding-bottom: 13px;
+    }
   }
 }
 
@@ -41,13 +46,18 @@
     border: 0;
     background-color: $transparent;
     color: $basic-white;
-    padding: 1em 0;
+    padding-bottom: 1em;
+    padding-top: 1.4em;
     width: 60%;
 
     &::placeholder {
       @include font-size (0.87em, 1.5em, 500);
       color: $basic-grey;
       font-family: $primary-text;
+    }
+
+    @include below ($mobile-width) {
+      padding-top: 1em;
     }
   }
 
@@ -58,8 +68,8 @@
     font-size: 1em;
 
     svg {
-      margin-left: 21px;
-      margin-top: 5px;
+      margin-left: 16px;
+      margin-top: 9px;
     }
 
     &:hover,
@@ -70,7 +80,6 @@
     &:focus,
     &:focus svg {
       opacity: 0.5;
-      ;
     }
   }
 }

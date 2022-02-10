@@ -24,9 +24,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 10px;
-    left: 2px;
-    width: 14px;
+    top: 0;
+    left: 10px;
+    width: 18px;
     height: 2px;
     background-color: $basic-black;
   }

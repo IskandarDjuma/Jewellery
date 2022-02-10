@@ -16,11 +16,12 @@
   flex-wrap: wrap;
 
   @include below ($tablet-width) {
-    gap: 45px 0;
+    gap: 38px 0;
     padding-right: 145px;
   }
 
   @include below ($mobile-width) {
+    gap: 40px 0;
     padding-right: 15px;
   }
 }

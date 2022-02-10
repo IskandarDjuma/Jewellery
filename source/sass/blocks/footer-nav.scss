@@ -21,23 +21,31 @@
   padding-top: 5px;
   overflow-x: auto;
 
+  @include below ($tablet-width) {
+    max-height: 200px;
+  }
+
   @include below ($mobile-width) {
     flex-wrap: nowrap;
     max-height: none;
     padding-top: 0;
 
     .footer-nav__item--4 {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
   }
 }
 
 .footer-nav__item {
   padding-bottom: 20px;
-  padding-right: 10px;
+  padding-right: 45px;
 
   &:last-child {
     padding-bottom: 0;
+  }
+
+  &:nth-child(n+5) {
+    padding-right: 0;
   }
 
   a {
@@ -47,6 +55,11 @@
     &:hover {
       color: $accent-color;
     }
+  }
+
+  @include below ($tablet-width) {
+    padding-bottom: 15px;
+    padding-right: 0;
   }
 
   @include below ($mobile-width) {

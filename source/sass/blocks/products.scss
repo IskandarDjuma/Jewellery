@@ -56,7 +56,11 @@
   }
 
   @include below ($tablet-width) {
-    padding-bottom: 5px;
+    padding-bottom: 10px;
+  }
+
+  @include below ($mobile-width) {
+    padding-bottom: 0;
   }
 }
 
@@ -66,7 +70,7 @@
   padding: 44px 0 53px;
 
   @include below ($tablet-width) {
-    padding-bottom: 45px;
+    padding-bottom: 43px;
   }
 
   @include below ($mobile-width) {
@@ -111,7 +115,7 @@
     }
 
     p {
-      padding-top: 24px;
+      padding-top: 18px;
     }
   }
 
@@ -140,7 +144,7 @@
 .products__button {
   content: "";
   position: absolute;
-  top: 50px;
+  top: 48px;
   width: 29px;
   height: 9px;
   background-repeat: no-repeat;
@@ -157,7 +161,7 @@
 
   &--next {
     background-image: url("../img/arrow-icon.svg");
-    right: 30px;
+    right: 0;
   }
 
   &:hover {
