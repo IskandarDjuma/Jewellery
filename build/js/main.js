@@ -80,9 +80,9 @@
   // Slider Goods
 
   const photos = [
-    'img/large/gold-necklace-large.jpg',
-    'img/large/pretty-gold-large.jpg',
-    'img/large/womens-necklace-large.jpg'
+    "img/large/gold-necklace-large.jpg",
+    "img/large/pretty-gold-large.jpg",
+    "img/large/womens-necklace-large.jpg"
   ];
 
   const thumbnails = document.querySelectorAll('.goods__photo-preview');
@@ -100,16 +100,15 @@
 
 
   // Modal
+  const modalLink = document.querySelector('.user-menu__button');
+  const feedbackPopup = document.querySelector('.modal-login');
+  const modalClose = document.querySelectorAll('.modal__close');
+  const userName = document.querySelector('input[data-login-input]');
+  const modalForm = document.querySelector('.modal__form');
+  const userPassword = document.querySelector('input[data-pas-input]');
 
-  var modalLink = document.querySelector('.user-menu__button');
-  var feedbackPopup = document.querySelector('.modal-login');
-  var modalClose = document.querySelector('.modal__close');
-  var userName = document.querySelector('input[data-login-input]');
-  var modalForm = document.querySelector('.modal__form');
-  var userPassword = document.querySelector('input[data-pas-input]');
-
-  var isStorageSupport = true;
-  var storage = '';
+  let isStorageSupport = true;
+  const storage = '';
 
   try {
     storage = localStorage.getItem('login');
@@ -117,27 +116,50 @@
     isStorageSupport = false;
   }
 
-  if (modalLink) {
-    modalLink.addEventListener('click', function (evt) {
+  const modalOpen = function (btn, modal) {
+    btn.addEventListener('click', function (evt) {
       evt.preventDefault();
-      feedbackPopup.classList.add('modal__show');
+      modal.classList.add('modal__show');
+      document.body.style.overflow = 'hidden';
+    });
+  }
 
-      if (storage) {
-        userName.value = storage;
-        userPassword.focus();
-      } else {
-        userName.focus();
+  const modalCloses = function (modal) {
+    modalClose.forEach(btn => {
+      btn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        modal.classList.remove('modal__show');
+        document.body.style.overflow = '';
+      });
+    });
+  };
+
+  const сlosingOnClickBackground = function (modal) {
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        e.preventDefault();
+        modal.classList.remove('modal__show');
+        document.body.style.overflow = '';
       }
     });
+  };
+
+  if (modalLink) {
+    modalOpen(modalLink, feedbackPopup);
+
+    if (storage) {
+      userName.value = storage;
+      userPassword.focus();
+    } else {
+      userName.focus();
+    }
   }
 
   if (modalClose) {
-    modalClose.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      feedbackPopup.classList.remove('modal__show');
-      feedbackPopup.classList.remove('modal__error');
-    });
+    modalCloses(feedbackPopup);
   }
+
+  сlosingOnClickBackground(feedbackPopup);
 
   if (modalForm) {
     modalForm.addEventListener('submit', function (evt) {
@@ -160,6 +182,7 @@
         evt.preventDefault();
         feedbackPopup.classList.remove('modal__show');
         feedbackPopup.classList.remove('modal__error');
+        document.body.style.overflow = '';
       }
     }
   });
@@ -168,21 +191,16 @@
 
   const cartLink = document.querySelector(".goods-info__btn");
   const popupCart = document.querySelector(".modal-cart");
-  const cartClose = document.querySelector(".modal__close");
 
   if (cartLink) {
-    cartLink.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popupCart.classList.add("modal__show");
-    });
+    modalOpen(cartLink, popupCart);
   }
 
-  if (cartClose) {
-    cartClose.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popupCart.classList.remove("modal__show");
-    });
+  if (modalClose) {
+    modalCloses(popupCart);
   }
+
+  сlosingOnClickBackground(popupCart);
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
@@ -192,5 +210,4 @@
       }
     }
   });
-
 })();

@@ -1,7 +1,7 @@
 .products-inner__item {
   @include below ($tablet-width) {
     img {
-      width: 206px;
+      width: auto;
       height: 208px;
     }
   }

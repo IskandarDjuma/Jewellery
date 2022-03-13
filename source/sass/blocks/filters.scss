@@ -88,6 +88,10 @@
     border: none;
     border-bottom: 1px solid $accent-color;
   }
+
+  @include below ($mobile-width) {
+    width: auto;
+  }
 }
 
 .filters__list {
@@ -110,7 +114,7 @@
 
 .filters__toggle {
   @include font-size (1em, 1.5em, 500);
-  width: 100%;
+  width: 90%;
   font-weight: 500;
   margin-top: 23px;
   margin-bottom: 17px;
@@ -162,7 +166,6 @@
   &--reset {
     border: 1px solid $accent-color;
     color: $basic-black;
-
   }
 
   &:hover {
@@ -176,6 +179,11 @@
   @include below ($tablet-width) {
     width: 362px;
     margin-left: 20px;
+  }
+
+  @include below ($mobile-width) {
+    width: 100%;
+    margin-left: 0;
   }
 }
 

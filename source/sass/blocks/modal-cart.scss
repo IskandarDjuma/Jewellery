@@ -1,7 +1,10 @@
-.modal-cart {
+.modal-cart__dialog {
   background-color: $basic-white;
   max-width: 500px;
   padding: 55px 35px;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
 
   h2 {
     @include font-size (1.62em, 1.5em, 700);

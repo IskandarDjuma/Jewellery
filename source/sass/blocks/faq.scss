@@ -50,7 +50,7 @@
       font-size: inherit;
       text-align: left;
       padding-bottom: 5px;
-      width: auto;
+      width: 100%;
     }
   }
 }
@@ -87,24 +87,6 @@
     p {
       font-size: 0.87em;
       width: 85%;
-    }
-  }
-}
-
-.faq__item--open {
-  .faq__content {
-    display: block;
-  }
-
-  .faq__button {
-    @include below ($tablet-width) {
-      padding-bottom: 20px;
-    }
-  }
-
-  .faq__button {
-    @include below ($mobile-width) {
-      padding-bottom: 10px;
     }
   }
 }

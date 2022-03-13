@@ -1,8 +1,11 @@
-.modal-login {
+.modal-login__dialog {
   max-width: 430px;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
 }
 
-.modal__login-form {
+.modal-login__form {
   h3 {
     @include font-size (2.12em, 1.5em, 700);
     font-family: $secondary-text;

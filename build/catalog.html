@@ -30,7 +30,7 @@
           <input class="search__field" type="search" name="search-text" id="search-text" placeholder="Type here to search" autocomplete="off">
         </form>
         <div class="page-header__logo logo">
-          <a href="main-page.html">
+          <a href="index.html">
             <svg class="logo__icon" width="66" height="66">
               <use xlink:href="img/sprite-auto.svg#icon-logo"></use>
             </svg>
@@ -54,19 +54,19 @@
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="#">What’s new</a>
+            <a href="catalog.html">What’s new</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">Chokers</a>
+            <a href="catalog.html">Chokers</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">Necklaces</a>
+            <a href="catalog.html">Necklaces</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">Rings</a>
+            <a href="catalog.html">Rings</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">Earrings</a>
+            <a href="catalog.html">Earrings</a>
           </li>
         </ul>
         <ul class="main-nav__tab-list">
@@ -383,41 +383,45 @@
       </div>
     </div>
   </footer>
-  <section class="modal modal-login modal-overlay">
-    <picture>
-      <!-- 1x: 430px; 2x: 860px -->
-      <source type="image/webp" srcset="img/intro-modal@1x.webp 1x, img/intro-modal@2x.webp 2x">
-      <img src="img/intro-modal@1x.jpg" srcset="img/intro-modal@2x.jpg" alt="
-        image of gold cufflinks" width="430" height="138">
-    </picture>
-    <h2 class="visually-hidden">Log In form</h2>
-    <form class="modal__login-form form" action="https://echo.htmlacademy.ru" method="POST">
-      <h3>Log In</h3>
-      <ul class="form__list">
-        <li class="form__item form__item--login">
-          <input type="email" name="login-login" data-login-input="" id="login-login" required="" minlength="2" placeholder="Your E-mail">
-          <label class="visually-hidden" for="login-login"> Enter your email</label>
-        </li>
-        <li class="form__item form__item--password">
-          <input type="password" name="password" data-pas-input="" id="password" required="" minlength="10" maxlength="18" placeholder="Password">
-          <label class="visually-hidden" for="password">Введеите номер телефона</label>
-        </li>
-        <li class="form__item form__item--restore">
-          <a href="#">Forgot your password?</a>
-        </li>
-        <li class="form__item">
-          <button class="form__button button button--primary" type="submit">Log In</button>
-        </li>
-        <li class="form__item form__item--sign-up">
-          <p>Don’t have an account?
-            <a href="#">Sign up</a>
-          </p>
-        </li>
-      </ul>
-    </form>
-    <button class="modal__close" type="button" aria-label="close"></button>
+  <section class="modal modal-login">
+    <div class="modal-login__dialog">
+      <div class="modal__content">
+        <picture>
+          <!-- 1x: 430px; 2x: 860px -->
+          <source type="image/webp" srcset="img/intro-modal@1x.webp 1x, img/intro-modal@2x.webp 2x">
+          <img src="img/intro-modal@1x.jpg" srcset="img/intro-modal@2x.jpg" alt="
+            image of gold cufflinks" width="430" height="138">
+        </picture>
+        <h2 class="visually-hidden">Log In form</h2>
+        <form class="modal-login__form form" action="https://echo.htmlacademy.ru" method="POST">
+          <h3>Log In</h3>
+          <ul class="form__list">
+            <li class="form__item form__item--login">
+              <input type="email" name="login-login" data-login-input="" id="login-login" required="" minlength="2" placeholder="Your E-mail">
+              <label class="visually-hidden" for="login-login"> Enter your email</label>
+            </li>
+            <li class="form__item form__item--password">
+              <input type="password" name="password" data-pas-input="" id="password" required="" minlength="10" maxlength="18" placeholder="Password">
+              <label class="visually-hidden" for="password">Введеите номер телефона</label>
+            </li>
+            <li class="form__item form__item--restore">
+              <a href="#">Forgot your password?</a>
+            </li>
+            <li class="form__item">
+              <button class="form__button button button--primary" type="submit">Log In</button>
+            </li>
+            <li class="form__item form__item--sign-up">
+              <p>Don’t have an account?
+                <a href="#">Sign up</a>
+              </p>
+            </li>
+          </ul>
+        </form>
+        <button class="modal__close" type="button" aria-label="close"></button>
+      </div>
+    </div>
   </section>
-  <script src="js/main.js"></script>
+  <script src="js/main.min.js"></script>
   <script src="js/vendor.js" type="module"></script>
 </body>
 

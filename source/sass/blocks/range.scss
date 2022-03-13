@@ -38,6 +38,26 @@
   &--max {
     left: 175px;
   }
+
+  @include below ($tablet-width) {
+    &--min {
+      left: 98px;
+    }
+
+    &--max {
+      left: 250px;
+    }
+  }
+
+  @include below ($mobile-width) {
+    &--min {
+      left: 140px;
+    }
+
+    &--max {
+      left: 390px;
+    }
+  }
 }
 
 .range__price-controls {

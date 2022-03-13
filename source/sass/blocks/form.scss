@@ -50,6 +50,7 @@
 }
 
 .form__item--sign-up {
+  padding-bottom: 10px;
   p {
     @include font-size (0.87em, 1.5em, 500);
     color: $basic-grey;
